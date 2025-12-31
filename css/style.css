@@ -1113,7 +1113,7 @@ section {
 }
 
 .event-card {
-    min-width: 400px;
+    flex: 0 0 calc((100% - 60px) / 3);
     background: var(--primary-bg);
     border: 1px solid var(--border-color);
     overflow: hidden;
@@ -1226,13 +1226,17 @@ section {
     }
 
     .event-card {
-        min-width: 300px;
+        flex: 0 0 100%;
     }
 
     .carousel-btn {
         width: 40px;
         height: 40px;
         font-size: 30px;
+    }
+
+    .events-carousel-wrapper {
+        gap: 10px;
     }
 
     .member-image {

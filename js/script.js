@@ -245,6 +245,12 @@ function formatDate(dateString) {
 let currentSlide = 0;
 let totalSlides = 0;
 
+function getCardsPerView() {
+    // Responsive cards per view
+    if (window.innerWidth <= 768) return 1;
+    return 3;
+}
+
 function initCarousel() {
     const prevBtn = document.querySelector('.prev-btn');
     const nextBtn = document.querySelector('.next-btn');
@@ -262,8 +268,8 @@ function initCarousel() {
     });
 
     nextBtn.addEventListener('click', () => {
-        const visibleCards = Math.floor(track.parentElement.offsetWidth / 430); // 400px card + 30px gap
-        if (currentSlide < totalSlides - visibleCards) {
+        const cardsPerView = getCardsPerView();
+        if (currentSlide < totalSlides - cardsPerView) {
             currentSlide++;
             updateCarousel();
         }
@@ -277,16 +283,23 @@ function updateCarousel() {
     const prevBtn = document.querySelector('.prev-btn');
     const nextBtn = document.querySelector('.next-btn');
 
-    if (!track) return;
+    if (!track || !track.children.length) return;
 
-    const offset = currentSlide * -430; // 400px card + 30px gap
+    const cardsPerView = getCardsPerView();
+
+    // Calculate card width including gap
+    const carousel = track.parentElement;
+    const carouselWidth = carousel.offsetWidth;
+    const gap = 30;
+    const cardWidth = (carouselWidth - (cardsPerView - 1) * gap) / cardsPerView;
+
+    // Move by one card width + gap
+    const offset = currentSlide * -(cardWidth + gap);
     track.style.transform = `translateX(${offset}px)`;
 
     // Update button states
     prevBtn.disabled = currentSlide === 0;
-
-    const visibleCards = Math.floor(track.parentElement.offsetWidth / 430);
-    nextBtn.disabled = currentSlide >= totalSlides - visibleCards;
+    nextBtn.disabled = currentSlide >= totalSlides - cardsPerView;
 }
 
 // Load data when page loads
