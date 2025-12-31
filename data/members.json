@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "Игорь Горбенко",
+    "role": "FIRST5",
+    "title": "Основатель клуба",
+    "achievements": "Чемпион MOTO RALLY CUP 2019-2023",
+    "image": "images/members/member1.jpg",
+    "bike": "Harley-Davidson"
+  },
+  {
+    "id": 2,
+    "name": "Имя Фамилия",
+    "role": "FIRST5",
+    "title": "Вице-президент",
+    "achievements": "Мастер спорта по мотокроссу",
+    "image": "images/members/member2.jpg",
+    "bike": "BMW R1250GS"
+  },
+  {
+    "id": 3,
+    "name": "Имя Фамилия",
+    "role": "FIRST5",
+    "title": "Road Captain",
+    "achievements": "Участник Дакара 2020",
+    "image": "images/members/member3.jpg",
+    "bike": "KTM 1290"
+  },
+  {
+    "id": 4,
+    "name": "Имя Фамилия",
+    "role": "FIRST5",
+    "title": "Сержант",
+    "achievements": "Мастер по карате, 3 дан",
+    "image": "images/members/member4.jpg",
+    "bike": "Yamaha MT-09"
+  },
+  {
+    "id": 5,
+    "name": "Имя Фамилия",
+    "role": "FIRST5",
+    "title": "Казначей",
+    "achievements": "Организатор MOTO RALLY CUP",
+    "image": "images/members/member5.jpg",
+    "bike": "Ducati Multistrada"
+  },
+  {
+    "id": 6,
+    "name": "Имя Фамилия",
+    "role": "MEMBER",
+    "title": "Член клуба",
+    "achievements": "Чемпион региона по эндуро",
+    "image": "images/members/member6.jpg",
+    "bike": "Honda CRF450"
+  },
+  {
+    "id": 7,
+    "name": "Имя Фамилия",
+    "role": "MEMBER",
+    "title": "Член клуба",
+    "achievements": "Участник ралли-рейдов",
+    "image": "images/members/member7.jpg",
+    "bike": "Suzuki V-Strom"
+  },
+  {
+    "id": 8,
+    "name": "Имя Фамилия",
+    "role": "MEMBER",
+    "title": "Член клуба",
+    "achievements": "Инструктор по вождению",
+    "image": "images/members/member8.jpg",
+    "bike": "Triumph Tiger"
+  },
+  {
+    "id": 9,
+    "name": "Имя Фамилия",
+    "role": "MEMBER",
+    "title": "Член клуба",
+    "achievements": "Мастер спорта по боксу",
+    "image": "images/members/member9.jpg",
+    "bike": "Kawasaki Z900"
+  },
+  {
+    "id": 10,
+    "name": "Имя Фамилия",
+    "role": "MEMBER",
+    "title": "Член клуба",
+    "achievements": "Участник кольцевых гонок",
+    "image": "images/members/member10.jpg",
+    "bike": "Aprilia Tuono"
+  }
+]

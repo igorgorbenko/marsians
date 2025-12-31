@@ -935,3 +935,219 @@ section {
         height: 60px;
     }
 }
+
+/* =====================================================
+   MEMBERS SECTION
+   ===================================================== */
+
+.members {
+    padding: 100px 0;
+    background: var(--primary-bg);
+}
+
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.member-card {
+    background: var(--secondary-bg);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+    border-color: var(--accent-color);
+}
+
+.member-card.first5 {
+    border: 2px solid var(--accent-color);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.member-card.first5::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--accent-color);
+}
+
+.member-image {
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-color: var(--secondary-bg);
+    position: relative;
+}
+
+.member-image::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(to top, var(--secondary-bg), transparent);
+}
+
+.member-info {
+    padding: 25px;
+}
+
+.member-role {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--accent-color);
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.member-card.first5 .member-role {
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.member-name {
+    font-size: 22px;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    color: var(--accent-color);
+}
+
+.member-title {
+    font-size: 13px;
+    color: #cccccc;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+.member-achievements {
+    font-size: 12px;
+    color: #999999;
+    margin-bottom: 12px;
+    line-height: 1.6;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+.member-bike {
+    font-size: 11px;
+    color: #666666;
+    letter-spacing: 1px;
+    padding-top: 12px;
+    border-top: 1px solid #333333;
+}
+
+/* =====================================================
+   EVENTS SECTION
+   ===================================================== */
+
+.events {
+    padding: 100px 0;
+    background: var(--secondary-bg);
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.event-card {
+    background: var(--primary-bg);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.15);
+    border-color: var(--accent-color);
+}
+
+.event-image {
+    width: 100%;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    background-color: var(--secondary-bg);
+    position: relative;
+}
+
+.event-category {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--accent-color);
+    color: var(--primary-bg);
+    padding: 6px 15px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.event-content {
+    padding: 30px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.event-date {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #888888;
+    margin-bottom: 15px;
+}
+
+.event-title {
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    color: var(--accent-color);
+    line-height: 1.4;
+}
+
+.event-description {
+    font-size: 13px;
+    line-height: 1.8;
+    color: #cccccc;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+/* =====================================================
+   RESPONSIVE - MEMBERS & EVENTS
+   ===================================================== */
+
+@media (max-width: 768px) {
+    .members-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .events-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .member-image {
+        height: 250px;
+    }
+
+    .event-image {
+        height: 200px;
+    }
+}

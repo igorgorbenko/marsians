@@ -233,3 +233,78 @@ function initMap() {
 
 // Вызов функции при загрузке страницы
 window.initMap = initMap;
+
+// Load and display events
+async function loadEvents() {
+    try {
+        const response = await fetch('data/events.json');
+        const events = await response.json();
+        const eventsContainer = document.getElementById('events-container');
+
+        if (!eventsContainer) return;
+
+        // Sort events by date (newest first)
+        events.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+        eventsContainer.innerHTML = events.map(event => `
+            <article class="event-card">
+                <div class="event-image" style="background-image: url('${event.image}')">
+                    <div class="event-category">${event.category}</div>
+                </div>
+                <div class="event-content">
+                    <div class="event-date">${formatDate(event.date)}</div>
+                    <h3 class="event-title">${event.title}</h3>
+                    <p class="event-description">${event.description}</p>
+                </div>
+            </article>
+        `).join('');
+    } catch (error) {
+        console.error('Error loading events:', error);
+    }
+}
+
+// Load and display members
+async function loadMembers() {
+    try {
+        const response = await fetch('data/members.json');
+        const members = await response.json();
+        const membersContainer = document.getElementById('members-container');
+
+        if (!membersContainer) return;
+
+        // Separate FIRST5 and regular members
+        const first5 = members.filter(m => m.role === 'FIRST5');
+        const regularMembers = members.filter(m => m.role === 'MEMBER');
+
+        // Display FIRST5 first
+        const allMembers = [...first5, ...regularMembers];
+
+        membersContainer.innerHTML = allMembers.map(member => `
+            <div class="member-card ${member.role === 'FIRST5' ? 'first5' : ''}">
+                <div class="member-image" style="background-image: url('${member.image}')"></div>
+                <div class="member-info">
+                    <div class="member-role">${member.role}</div>
+                    <h3 class="member-name">${member.name}</h3>
+                    <div class="member-title">${member.title}</div>
+                    <div class="member-achievements">${member.achievements}</div>
+                    <div class="member-bike">${member.bike}</div>
+                </div>
+            </div>
+        `).join('');
+    } catch (error) {
+        console.error('Error loading members:', error);
+    }
+}
+
+// Format date to Russian format
+function formatDate(dateString) {
+    const date = new Date(dateString);
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    return date.toLocaleDateString('ru-RU', options);
+}
+
+// Load data when page loads
+document.addEventListener('DOMContentLoaded', () => {
+    loadEvents();
+    loadMembers();
+});
