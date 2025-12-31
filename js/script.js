@@ -74,96 +74,8 @@ document.querySelectorAll('section, .objective-card, .level-card, .stat-item, .c
 document.querySelector('.hero').style.opacity = '1';
 document.querySelector('.hero').style.transform = 'none';
 
-// Google Maps initialization
+// Leaflet Map initialization
 function initMap() {
-    // Черно-белый стиль карты
-    const mapStyles = [
-        { elementType: "geometry", stylers: [{ color: "#0a0a0a" }] },
-        { elementType: "labels.text.stroke", stylers: [{ color: "#000000" }] },
-        { elementType: "labels.text.fill", stylers: [{ color: "#ffffff" }] },
-        {
-            featureType: "administrative.locality",
-            elementType: "labels.text.fill",
-            stylers: [{ color: "#cccccc" }]
-        },
-        {
-            featureType: "poi",
-            elementType: "labels.text.fill",
-            stylers: [{ color: "#888888" }]
-        },
-        {
-            featureType: "poi.park",
-            elementType: "geometry",
-            stylers: [{ color: "#1a1a1a" }]
-        },
-        {
-            featureType: "poi.park",
-            elementType: "labels.text.fill",
-            stylers: [{ color: "#666666" }]
-        },
-        {
-            featureType: "road",
-            elementType: "geometry",
-            stylers: [{ color: "#1a1a1a" }]
-        },
-        {
-            featureType: "road",
-            elementType: "geometry.stroke",
-            stylers: [{ color: "#333333" }]
-        },
-        {
-            featureType: "road",
-            elementType: "labels.text.fill",
-            stylers: [{ color: "#888888" }]
-        },
-        {
-            featureType: "road.highway",
-            elementType: "geometry",
-            stylers: [{ color: "#2a2a2a" }]
-        },
-        {
-            featureType: "road.highway",
-            elementType: "geometry.stroke",
-            stylers: [{ color: "#444444" }]
-        },
-        {
-            featureType: "transit",
-            elementType: "geometry",
-            stylers: [{ color: "#1a1a1a" }]
-        },
-        {
-            featureType: "transit.station",
-            elementType: "labels.text.fill",
-            stylers: [{ color: "#888888" }]
-        },
-        {
-            featureType: "water",
-            elementType: "geometry",
-            stylers: [{ color: "#000000" }]
-        },
-        {
-            featureType: "water",
-            elementType: "labels.text.fill",
-            stylers: [{ color: "#555555" }]
-        },
-        {
-            featureType: "water",
-            elementType: "labels.text.stroke",
-            stylers: [{ color: "#000000" }]
-        }
-    ];
-
-    // Центр карты - Москва
-    const map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 3,
-        center: { lat: 50, lng: 40 },
-        styles: mapStyles,
-        mapTypeControl: false,
-        streetViewControl: false,
-        fullscreenControl: true,
-        zoomControl: true
-    });
-
     // Все города с координатами
     const locations = [
         // Россия - Москва и область
@@ -201,38 +113,68 @@ function initMap() {
         { lat: 44.7333, lng: 18.0833, title: "Добой, Босния", type: "international" }
     ];
 
+    // Инициализация карты
+    const map = L.map('map', {
+        center: [50, 40],
+        zoom: 3,
+        zoomControl: true
+    });
+
+    // Черно-белая тема для карты
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+        subdomains: 'abcd',
+        maxZoom: 19
+    }).addTo(map);
+
     // Добавление маркеров
     locations.forEach(location => {
-        const marker = new google.maps.Marker({
-            position: { lat: location.lat, lng: location.lng },
-            map: map,
-            title: location.title,
-            icon: {
-                path: google.maps.SymbolPath.CIRCLE,
-                scale: location.type === 'main' ? 10 : location.type === 'major' ? 8 : location.type === 'international' ? 6 : 5,
-                fillColor: location.type === 'international' ? '#cccccc' : '#ffffff',
-                fillOpacity: 1,
-                strokeColor: '#000000',
-                strokeWeight: 2
-            }
+        const markerSize = location.type === 'main' ? 12 :
+                          location.type === 'major' ? 10 :
+                          location.type === 'international' ? 8 : 7;
+
+        const markerColor = location.type === 'international' ? '#cccccc' : '#ffffff';
+
+        // Создание кастомной иконки
+        const customIcon = L.divIcon({
+            className: 'custom-marker',
+            html: `<div style="
+                width: ${markerSize}px;
+                height: ${markerSize}px;
+                background-color: ${markerColor};
+                border: 2px solid #000000;
+                border-radius: 50%;
+                box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            "></div>`,
+            iconSize: [markerSize, markerSize],
+            iconAnchor: [markerSize / 2, markerSize / 2]
         });
 
-        // Информационное окно при клике
-        const infoWindow = new google.maps.InfoWindow({
-            content: `<div style="color: #000; font-family: 'Nasalization', Arial, sans-serif; padding: 10px;">
-                        <strong>${location.title}</strong><br>
-                        MARSIANS MCC
-                      </div>`
-        });
+        const marker = L.marker([location.lat, location.lng], { icon: customIcon }).addTo(map);
 
-        marker.addListener('click', () => {
-            infoWindow.open(map, marker);
-        });
+        // Popup при клике
+        marker.bindPopup(`
+            <div style="
+                font-family: 'Nasalization', Arial, sans-serif;
+                padding: 10px;
+                color: #ffffff;
+                background: #000000;
+                border: 1px solid #ffffff;
+                letter-spacing: 1px;
+            ">
+                <strong style="font-size: 12px;">${location.title}</strong><br>
+                <span style="font-size: 10px; color: #cccccc;">MARSIANS MCC</span>
+            </div>
+        `);
     });
 }
 
-// Вызов функции при загрузке страницы
-window.initMap = initMap;
+// Вызов функции при загрузке страницы (когда Leaflet готов)
+if (typeof L !== 'undefined') {
+    window.addEventListener('load', initMap);
+} else {
+    document.addEventListener('DOMContentLoaded', initMap);
+}
 
 // Load and display events
 async function loadEvents() {
