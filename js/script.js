@@ -205,7 +205,7 @@ async function loadEvents() {
     }
 }
 
-// Load and display members
+// Load and display members (FIRST5 only)
 async function loadMembers() {
     try {
         const response = await fetch('data/members.json');
@@ -214,15 +214,11 @@ async function loadMembers() {
 
         if (!membersContainer) return;
 
-        // Separate FIRST5 and regular members
+        // Show only FIRST5 members
         const first5 = members.filter(m => m.role === 'FIRST5');
-        const regularMembers = members.filter(m => m.role === 'MEMBER');
 
-        // Display FIRST5 first
-        const allMembers = [...first5, ...regularMembers];
-
-        membersContainer.innerHTML = allMembers.map(member => `
-            <div class="member-card ${member.role === 'FIRST5' ? 'first5' : ''}">
+        membersContainer.innerHTML = first5.map(member => `
+            <div class="member-card first5">
                 <div class="member-image" style="background-image: url('${member.image}')"></div>
                 <div class="member-info">
                     <div class="member-role">${member.role}</div>

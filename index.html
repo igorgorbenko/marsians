@@ -21,11 +21,12 @@
                     <span class="logo-mcc">MCC</span>
                 </div>
                 <ul class="nav-menu">
-                    <li><a href="#philosophy">Философия</a></li>
                     <li><a href="#about">О клубе</a></li>
-                    <li><a href="#membership">Членство</a></li>
                     <li><a href="#members">Лица клуба</a></li>
                     <li><a href="#events">Мероприятия</a></li>
+                    <li><a href="#philosophy">Философия</a></li>
+                    <li><a href="#geography">География</a></li>
+                    <li><a href="#membership">Членство</a></li>
                     <li><a href="#contact">Контакты</a></li>
                 </ul>
                 <div class="burger">
@@ -49,6 +50,67 @@
         </div>
         <div class="scroll-indicator">
             <span></span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">О клубе</h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>MARSIANS MCC — это мотоклуб созданный спортсменами и для спортсменов на базе гоночной серии MOTO RALLY CUP и MOTO RIDERS CLUB.</p>
+                    <p>Клуб объединяет спортсменов из различных дисциплин: ралли, ралли-рейды, кольцевые гонки, мотокросс, эндуро, трофи-рейды, карате, бокс и других видов спорта.</p>
+                    <p>Мы создаём сообщество единомышленников, объединённых страстью к мотоциклам и активному образу жизни.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">2019</div>
+                        <div class="stat-label">Год основания</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">2022</div>
+                        <div class="stat-label">Статус MCC</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">Стран</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Members Section -->
+    <section id="members" class="members">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Лица клуба</h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="members-content">
+                <div id="members-container" class="members-grid">
+                    <!-- Members will be loaded dynamically -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="events">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Мероприятия</h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="events-content">
+                <div id="events-container" class="events-grid">
+                    <!-- Events will be loaded dynamically -->
+                </div>
+            </div>
         </div>
     </section>
 
@@ -90,31 +152,31 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
+    <!-- Geography Section -->
+    <section id="geography" class="geography">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">О клубе</h2>
+                <h2 class="section-title">География клуба</h2>
                 <div class="title-line"></div>
             </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>MARSIANS MCC — это мотоклуб созданный спортсменами и для спортсменов на базе гоночной серии MOTO RALLY CUP и MOTO RIDERS CLUB.</p>
-                    <p>Клуб объединяет спортсменов из различных дисциплин: ралли, ралли-рейды, кольцевые гонки, мотокросс, эндуро, трофи-рейды, карате, бокс и других видов спорта.</p>
-                    <p>Мы создаём сообщество единомышленников, объединённых страстью к мотоциклам и активному образу жизни.</p>
-                </div>
-                <div class="about-stats">
-                    <div class="stat-item">
-                        <div class="stat-number">2019</div>
-                        <div class="stat-label">Год основания</div>
+            <div class="geography-content">
+                <div id="map" class="google-map"></div>
+                <div class="geography-stats">
+                    <div class="stat-block">
+                        <div class="stat-value">28</div>
+                        <div class="stat-desc">Городов</div>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-number">2022</div>
-                        <div class="stat-label">Статус MCC</div>
+                    <div class="stat-block">
+                        <div class="stat-value">10</div>
+                        <div class="stat-desc">Стран</div>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-number">10+</div>
-                        <div class="stat-label">Стран</div>
+                    <div class="stat-block">
+                        <div class="stat-value">20</div>
+                        <div class="stat-desc">Городов России</div>
+                    </div>
+                    <div class="stat-block">
+                        <div class="stat-value">8</div>
+                        <div class="stat-desc">Городов Подмосковья</div>
                     </div>
                 </div>
             </div>
@@ -146,67 +208,6 @@
                         <span class="path-arrow">→</span>
                         <span class="path-step elite">FIRST5</span>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Members Section -->
-    <section id="members" class="members">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Лица клуба</h2>
-                <div class="title-line"></div>
-            </div>
-            <div class="members-content">
-                <div id="members-container" class="members-grid">
-                    <!-- Members will be loaded dynamically -->
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Geography Section -->
-    <section class="geography">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">География клуба</h2>
-                <div class="title-line"></div>
-            </div>
-            <div class="geography-content">
-                <div id="map" class="google-map"></div>
-                <div class="geography-stats">
-                    <div class="stat-block">
-                        <div class="stat-value">28</div>
-                        <div class="stat-desc">Городов</div>
-                    </div>
-                    <div class="stat-block">
-                        <div class="stat-value">10</div>
-                        <div class="stat-desc">Стран</div>
-                    </div>
-                    <div class="stat-block">
-                        <div class="stat-value">20</div>
-                        <div class="stat-desc">Городов России</div>
-                    </div>
-                    <div class="stat-block">
-                        <div class="stat-value">8</div>
-                        <div class="stat-desc">Городов Подмосковья</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Events Section -->
-    <section id="events" class="events">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Мероприятия</h2>
-                <div class="title-line"></div>
-            </div>
-            <div class="events-content">
-                <div id="events-container" class="events-grid">
-                    <!-- Events will be loaded dynamically -->
                 </div>
             </div>
         </div>
