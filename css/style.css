@@ -1,0 +1,937 @@
+/* ========================
+   GLOBAL STYLES & RESET
+   ======================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-bg: #000000;
+    --secondary-bg: #0a0a0a;
+    --accent-color: #ffffff;
+    --accent-hover: #cccccc;
+    --text-primary: #ffffff;
+    --text-secondary: #cccccc;
+    --text-muted: #888888;
+    --border-color: #ffffff;
+    --gradient-overlay: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.9) 100%);
+    --shadow-strong: 0 10px 40px rgba(255, 255, 255, 0.1);
+    --shadow-medium: 0 5px 20px rgba(255, 255, 255, 0.05);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Nasalization', 'Arial', sans-serif;
+    background-color: var(--primary-bg);
+    color: var(--text-primary);
+    line-height: 1.8;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Nasalization', 'Arial', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ========================
+   HEADER & NAVIGATION
+   ======================== */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.logo-text {
+    font-family: 'Nasalization', 'Arial', sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    color: var(--text-primary);
+}
+
+.logo-mcc {
+    font-family: 'Nasalization', 'Arial', sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    color: var(--text-primary);
+}
+
+.nav-menu {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.nav-menu li a {
+    font-family: 'Nasalization', 'Arial', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    position: relative;
+    padding: 5px 0;
+}
+
+.nav-menu li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--text-primary);
+    transition: width 0.3s ease;
+}
+
+.nav-menu li a:hover {
+    color: var(--text-primary);
+}
+
+.nav-menu li a:hover::after {
+    width: 100%;
+}
+
+.burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.burger span {
+    width: 25px;
+    height: 3px;
+    background: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+/* ========================
+   HERO SECTION
+   ======================== */
+
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.95) 100%),
+        url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>'),
+        radial-gradient(ellipse at center, #0a0a0a 0%, #000000 100%);
+    background-size: cover, 100px 100px, cover;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+}
+
+.hero-content {
+    text-align: center;
+    z-index: 1;
+    animation: fadeInUp 1s ease;
+}
+
+.hero-title {
+    font-size: 96px;
+    font-weight: 400;
+    letter-spacing: 16px;
+    margin-bottom: 25px;
+    color: var(--text-primary);
+    text-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
+    animation: textGlow 3s ease-in-out infinite alternate;
+}
+
+.hero-subtitle {
+    font-family: 'Nasalization', 'Arial', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    margin-bottom: 35px;
+}
+
+.hero-date {
+    font-family: 'Nasalization', 'Arial', sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: var(--text-primary);
+    padding: 12px 24px;
+    border: 1px solid var(--text-primary);
+    display: inline-block;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.scroll-indicator span {
+    display: block;
+    width: 2px;
+    height: 60px;
+    background: linear-gradient(to bottom, var(--text-primary), transparent);
+    animation: scrollDown 2s ease-in-out infinite;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes textGlow {
+    from {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    }
+    to {
+        text-shadow: 0 0 40px rgba(255, 255, 255, 0.4);
+    }
+}
+
+@keyframes scrollDown {
+    0%, 100% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* ========================
+   SECTION COMMON STYLES
+   ======================== */
+
+section {
+    padding: 120px 0;
+    position: relative;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.section-title {
+    font-size: 48px;
+    font-weight: 400;
+    letter-spacing: 8px;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+}
+
+.title-line {
+    width: 80px;
+    height: 4px;
+    background: var(--text-primary);
+    margin: 0 auto;
+}
+
+/* ========================
+   PHILOSOPHY SECTION
+   ======================== */
+
+.philosophy {
+    background: var(--primary-bg);
+    position: relative;
+}
+
+.philosophy::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--border-color), transparent);
+}
+
+.philosophy-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.philosophy-card {
+    background: var(--secondary-bg);
+    padding: 40px 30px;
+    border: 1px solid var(--border-color);
+    text-align: left;
+    transition: all 0.3s ease;
+    position: relative;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.philosophy-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 0;
+    background: var(--text-primary);
+    transition: height 0.3s ease;
+}
+
+.philosophy-card:hover::before {
+    height: 100%;
+}
+
+.philosophy-card:hover {
+    border-color: var(--text-primary);
+    transform: translateX(5px);
+    box-shadow: var(--shadow-medium);
+}
+
+.philosophy-card h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: var(--text-primary);
+    letter-spacing: 2px;
+}
+
+.philosophy-card p {
+    font-family: 'Nasalization', 'Arial', sans-serif;
+    font-size: 11px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    letter-spacing: 0.5px;
+}
+
+/* ========================
+   ABOUT SECTION
+   ======================== */
+
+.about {
+    background: var(--secondary-bg);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-text p {
+    font-family: 'Nasalization', 'Arial', sans-serif;
+    font-size: 15px;
+    line-height: 2;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.about-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 30px;
+    background: var(--primary-bg);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+    border-color: var(--text-primary);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+.stat-number {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    font-family: 'Nasalization', 'Arial', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+}
+
+/* ========================
+   OBJECTIVES SECTION
+   ======================== */
+
+.objectives {
+    background: var(--primary-bg);
+}
+
+.objectives-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.objective-card {
+    background: var(--secondary-bg);
+    padding: 40px 30px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.objective-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: linear-gradient(to bottom, var(--text-primary), transparent);
+    opacity: 0.1;
+    transition: height 0.3s ease;
+}
+
+.objective-card:hover::before {
+    height: 100%;
+}
+
+.objective-card:hover {
+    border-color: var(--text-primary);
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-strong);
+}
+
+.objective-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 25px;
+    color: var(--text-primary);
+}
+
+.objective-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.objective-card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: var(--text-primary);
+}
+
+.objective-card p {
+    font-family: 'Nasalization', 'Arial', sans-serif;
+    font-size: 12px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    letter-spacing: 0.5px;
+}
+
+/* ========================
+   MEMBERSHIP SECTION
+   ======================== */
+
+.membership {
+    background: var(--secondary-bg);
+}
+
+.membership-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.membership-info {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.membership-info h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+}
+
+.membership-info p {
+    font-family: 'Nasalization', 'Arial', sans-serif;
+    font-size: 13px;
+    line-height: 2;
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+
+.membership-path {
+    margin-top: 50px;
+    padding: 40px;
+    background: var(--secondary-bg);
+    border: 1px solid var(--border-color);
+}
+
+.path-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.path-step {
+    font-family: 'Nasalization', 'Arial', sans-serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+    padding: 12px 24px;
+    border: 1px solid var(--border-color);
+    background: var(--primary-bg);
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+.path-step:hover {
+    border-color: var(--text-primary);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.path-step.highlight {
+    border-color: var(--text-primary);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, var(--primary-bg) 100%);
+}
+
+.path-step.elite {
+    border-color: var(--text-primary);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.15);
+}
+
+.path-arrow {
+    font-family: 'Nasalization', 'Arial', sans-serif;
+    font-size: 20px;
+    color: var(--text-secondary);
+}
+
+/* ========================
+   GEOGRAPHY SECTION
+   ======================== */
+
+.geography {
+    background: var(--primary-bg);
+}
+
+.geography-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.google-map {
+    width: 100%;
+    height: 600px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 50px;
+    background: var(--secondary-bg);
+}
+
+/* Google Maps info window styling */
+.gm-style .gm-style-iw-c {
+    background-color: #ffffff !important;
+    border-radius: 0 !important;
+    border: 1px solid #000000 !important;
+}
+
+.gm-style .gm-style-iw-t::after {
+    background: #ffffff !important;
+    border: 1px solid #000000 !important;
+}
+
+.geography-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.stat-block {
+    background: var(--secondary-bg);
+    padding: 30px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.stat-block:hover {
+    border-color: var(--text-primary);
+    transform: translateY(-5px);
+}
+
+.stat-value {
+    font-family: 'Nasalization', 'Arial', sans-serif;
+    font-size: 48px;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.stat-desc {
+    font-family: 'Nasalization', 'Arial', sans-serif;
+    font-size: 12px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* ========================
+   CONTACT SECTION
+   ======================== */
+
+.contact {
+    background: var(--secondary-bg);
+}
+
+.contact-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 40px;
+    background: var(--primary-bg);
+    border: 1px solid var(--border-color);
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    border-color: var(--text-primary);
+    box-shadow: var(--shadow-medium);
+}
+
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    color: var(--text-primary);
+}
+
+.contact-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.contact-details h4 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+}
+
+.contact-details a,
+.contact-details p {
+    font-family: 'Nasalization', 'Arial', sans-serif;
+    font-size: 13px;
+    color: var(--text-secondary);
+    letter-spacing: 0.5px;
+}
+
+.contact-details a:hover {
+    color: var(--text-primary);
+}
+
+.contact-socials {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.social-link {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background: var(--text-primary);
+    border-color: var(--text-primary);
+    color: var(--primary-bg);
+    transform: translateY(-5px);
+}
+
+/* ========================
+   FOOTER
+   ======================== */
+
+.footer {
+    background: var(--primary-bg);
+    border-top: 1px solid var(--border-color);
+    padding: 60px 0 30px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo img {
+    height: 80px;
+    width: auto;
+}
+
+.footer-info {
+    text-align: right;
+}
+
+.footer-info p {
+    font-family: 'Nasalization', 'Arial', sans-serif;
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 5px;
+    letter-spacing: 0.5px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-bottom p {
+    font-family: 'Nasalization', 'Arial', sans-serif;
+    font-size: 10px;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+}
+
+/* ========================
+   RESPONSIVE DESIGN
+   ======================== */
+
+@media (max-width: 968px) {
+    .hero-title {
+        font-size: 64px;
+        letter-spacing: 8px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+        letter-spacing: 3px;
+    }
+
+    .hero-date {
+        font-size: 10px;
+        padding: 10px 20px;
+    }
+
+    .section-title {
+        font-size: 40px;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .philosophy-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .objectives-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .path-line {
+        gap: 10px;
+    }
+
+    .path-step {
+        font-size: 12px;
+        padding: 10px 16px;
+    }
+
+    .path-arrow {
+        font-size: 16px;
+    }
+
+    .geography-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: rgba(10, 10, 10, 0.98);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        transition: right 0.3s ease;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .footer-info {
+        text-align: center;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero-title {
+        font-size: 48px;
+        letter-spacing: 5px;
+    }
+
+    .hero-subtitle {
+        font-size: 18px;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+
+    section {
+        padding: 80px 0;
+    }
+
+    .philosophy-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .objectives-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .path-step {
+        font-size: 10px;
+        padding: 8px 12px;
+    }
+
+    .world-map {
+        padding: 20px;
+    }
+
+    .stat-value {
+        font-size: 36px;
+    }
+
+    .contact-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    .logo-text,
+    .logo-mcc {
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+
+    .hero-title {
+        font-size: 42px;
+        letter-spacing: 4px;
+    }
+
+    .hero-subtitle {
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+
+    .hero-date {
+        font-size: 9px;
+        padding: 8px 16px;
+    }
+
+    .footer-logo img {
+        height: 60px;
+    }
+}

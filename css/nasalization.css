@@ -1,0 +1,9 @@
+/* NASALIZATION Font Face Declaration */
+
+@font-face {
+    font-family: 'Nasalization';
+    src: url('../fonts/Nasalization Rg.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
