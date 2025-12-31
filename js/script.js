@@ -255,11 +255,13 @@ function initCarousel() {
     const prevBtn = document.querySelector('.prev-btn');
     const nextBtn = document.querySelector('.next-btn');
     const track = document.getElementById('events-container');
+    const carousel = document.querySelector('.events-carousel');
 
-    if (!track || !prevBtn || !nextBtn) return;
+    if (!track || !prevBtn || !nextBtn || !carousel) return;
 
     totalSlides = track.children.length;
 
+    // Button click handlers
     prevBtn.addEventListener('click', () => {
         if (currentSlide > 0) {
             currentSlide--;
@@ -274,6 +276,60 @@ function initCarousel() {
             updateCarousel();
         }
     });
+
+    // Mouse wheel scroll
+    carousel.addEventListener('wheel', (e) => {
+        e.preventDefault();
+        const cardsPerView = getCardsPerView();
+
+        if (e.deltaY > 0) {
+            // Scroll down/right - next
+            if (currentSlide < totalSlides - cardsPerView) {
+                currentSlide++;
+                updateCarousel();
+            }
+        } else {
+            // Scroll up/left - prev
+            if (currentSlide > 0) {
+                currentSlide--;
+                updateCarousel();
+            }
+        }
+    }, { passive: false });
+
+    // Touch swipe support
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    carousel.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    carousel.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    }, { passive: true });
+
+    function handleSwipe() {
+        const cardsPerView = getCardsPerView();
+        const swipeThreshold = 50;
+
+        if (touchStartX - touchEndX > swipeThreshold) {
+            // Swipe left - next
+            if (currentSlide < totalSlides - cardsPerView) {
+                currentSlide++;
+                updateCarousel();
+            }
+        }
+
+        if (touchEndX - touchStartX > swipeThreshold) {
+            // Swipe right - prev
+            if (currentSlide > 0) {
+                currentSlide--;
+                updateCarousel();
+            }
+        }
+    }
 
     updateCarousel();
 }

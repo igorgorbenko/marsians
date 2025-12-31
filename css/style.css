@@ -1104,6 +1104,11 @@ section {
 .events-carousel {
     overflow: hidden;
     flex: 1;
+    cursor: grab;
+}
+
+.events-carousel:active {
+    cursor: grabbing;
 }
 
 .events-track {
