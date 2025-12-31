@@ -241,8 +241,62 @@ function formatDate(dateString) {
     return date.toLocaleDateString('ru-RU', options);
 }
 
+// Events Carousel
+let currentSlide = 0;
+let totalSlides = 0;
+
+function initCarousel() {
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    const track = document.getElementById('events-container');
+
+    if (!track || !prevBtn || !nextBtn) return;
+
+    totalSlides = track.children.length;
+
+    prevBtn.addEventListener('click', () => {
+        if (currentSlide > 0) {
+            currentSlide--;
+            updateCarousel();
+        }
+    });
+
+    nextBtn.addEventListener('click', () => {
+        const visibleCards = Math.floor(track.parentElement.offsetWidth / 430); // 400px card + 30px gap
+        if (currentSlide < totalSlides - visibleCards) {
+            currentSlide++;
+            updateCarousel();
+        }
+    });
+
+    updateCarousel();
+}
+
+function updateCarousel() {
+    const track = document.getElementById('events-container');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+
+    if (!track) return;
+
+    const offset = currentSlide * -430; // 400px card + 30px gap
+    track.style.transform = `translateX(${offset}px)`;
+
+    // Update button states
+    prevBtn.disabled = currentSlide === 0;
+
+    const visibleCards = Math.floor(track.parentElement.offsetWidth / 430);
+    nextBtn.disabled = currentSlide >= totalSlides - visibleCards;
+}
+
 // Load data when page loads
 document.addEventListener('DOMContentLoaded', () => {
-    loadEvents();
+    loadEvents().then(() => {
+        // Initialize carousel after events are loaded
+        setTimeout(initCarousel, 100);
+    });
     loadMembers();
 });
+
+// Update carousel on window resize
+window.addEventListener('resize', updateCarousel);
