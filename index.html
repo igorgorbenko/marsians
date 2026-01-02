@@ -30,13 +30,14 @@
                     <span class="logo-mcc">MCC</span>
                 </div>
                 <ul class="nav-menu">
-                    <li><a href="#about" data-i18n="nav.about">О клубе</a></li>
-                    <li><a href="#members" data-i18n="nav.members">Лица клуба</a></li>
-                    <li><a href="#events" data-i18n="nav.events">Мероприятия</a></li>
-                    <li><a href="#philosophy" data-i18n="nav.philosophy">Философия</a></li>
-                    <li><a href="#geography" data-i18n="nav.geography">География</a></li>
-                    <li><a href="#membership" data-i18n="nav.membership">Членство</a></li>
-                    <li><a href="#contact" data-i18n="nav.contact">Контакты</a></li>
+                    <li><a href="index.html#about" data-i18n="nav.about">О клубе</a></li>
+                    <li><a href="index.html#philosophy" data-i18n="nav.philosophy">Философия</a></li>
+                    <li><a href="index.html#members" data-i18n="nav.members">Лица клуба</a></li>
+                    <li><a href="events.html" data-i18n="nav.events">Мероприятия</a></li>
+                    <li><a href="memorial.html" data-i18n="nav.memorial">Мемориал</a></li>
+                    <li><a href="index.html#geography" data-i18n="nav.geography">География</a></li>
+                    <li><a href="index.html#membership" data-i18n="nav.membership">Членство</a></li>
+                    <li><a href="index.html#contact" data-i18n="nav.contact">Контакты</a></li>
                 </ul>
                 <div class="lang-switcher">
                     <button class="lang-btn active" data-lang="ru">RU</button>
@@ -100,68 +101,6 @@
         </div>
     </section>
 
-    <!-- Members Section -->
-    <section id="members" class="members">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title" data-i18n="members.title">Лица клуба</h2>
-                <div class="title-line"></div>
-            </div>
-            <div class="members-content">
-                <!-- FIRST5 Section -->
-                <div class="first5-section">
-                    <h3 class="first5-title">FIRST 5</h3>
-                    <div id="first5-container" class="first5-grid">
-                        <!-- FIRST5 will be loaded dynamically -->
-                    </div>
-                </div>
-
-                <!-- Members Carousel -->
-                <div class="members-carousel-section">
-                    <h3 class="members-subtitle" data-i18n="members.subtitle">Члены клуба</h3>
-                    <div class="members-carousel-wrapper">
-                        <button class="carousel-btn prev-btn members-prev" aria-label="Previous">
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </button>
-                        <div class="members-carousel">
-                            <div id="members-container" class="members-carousel-track">
-                                <!-- Members will be loaded dynamically -->
-                            </div>
-                        </div>
-                        <button class="carousel-btn next-btn members-next" aria-label="Next">
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Events Section -->
-    <section id="events" class="events">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title" data-i18n="events.title">Мероприятия</h2>
-                <div class="title-line"></div>
-            </div>
-            <div class="events-content">
-                <div class="events-carousel-wrapper">
-                    <button class="carousel-btn prev-btn" aria-label="Previous">‹</button>
-                    <div class="events-carousel">
-                        <div id="events-container" class="events-track">
-                            <!-- Events will be loaded dynamically -->
-                        </div>
-                    </div>
-                    <button class="carousel-btn next-btn" aria-label="Next">›</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Philosophy & Objectives Section -->
     <section id="philosophy" class="philosophy">
         <div class="container">
@@ -200,6 +139,47 @@
                         <h3 data-i18n="philosophy.yinyang.title">Баланс противоположностей — Инь и Ян</h3>
                         <p data-i18n="philosophy.yinyang.text1">Сила и спокойствие. Скорость и контроль. Свобода и дисциплина.</p>
                         <p data-i18n="philosophy.yinyang.text2">Мы живём в гармонии контрастов — это наш характер и символика.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Members Section -->
+    <section id="members" class="members">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="members.title">Лица клуба</h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="members-content">
+                <!-- FIRST5 Section -->
+                <div class="first5-section">
+                    <h3 class="first5-title">FIRST 5</h3>
+                    <div id="first5-container" class="first5-grid">
+                        <!-- FIRST5 will be loaded dynamically -->
+                    </div>
+                </div>
+
+                <!-- Members Carousel -->
+                <div class="members-carousel-section">
+                    <h3 class="members-subtitle" data-i18n="members.subtitle">Члены клуба</h3>
+                    <div class="members-carousel-wrapper">
+                        <button class="carousel-btn prev-btn members-prev" aria-label="Previous">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <div class="members-carousel">
+                            <div id="members-container" class="members-carousel-track">
+                                <!-- Members will be loaded dynamically -->
+                            </div>
+                        </div>
+                        <button class="carousel-btn next-btn members-next" aria-label="Next">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
                     </div>
                 </div>
             </div>

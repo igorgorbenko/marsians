@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MARSIANS MCC - Мероприятия и события клуба">
+    <meta name="theme-color" content="#000000">
+    <title>Мероприятия - MARSIANS MCC</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="images/favicon-192.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <link rel="stylesheet" href="css/nasalization.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">
+                    <a href="index.html" style="display: flex; align-items: baseline; gap: 8px; text-decoration: none;">
+                        <span class="logo-text">MARSIANS</span>
+                        <span class="logo-mcc">MCC</span>
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html#about" data-i18n="nav.about">О клубе</a></li>
+                    <li><a href="index.html#philosophy" data-i18n="nav.philosophy">Философия</a></li>
+                    <li><a href="index.html#members" data-i18n="nav.members">Лица клуба</a></li>
+                    <li><a href="events.html" data-i18n="nav.events">Мероприятия</a></li>
+                    <li><a href="memorial.html" data-i18n="nav.memorial">Мемориал</a></li>
+                    <li><a href="index.html#geography" data-i18n="nav.geography">География</a></li>
+                    <li><a href="index.html#membership" data-i18n="nav.membership">Членство</a></li>
+                    <li><a href="index.html#contact" data-i18n="nav.contact">Контакты</a></li>
+                </ul>
+                <div class="lang-switcher">
+                    <button class="lang-btn active" data-lang="ru">RU</button>
+                    <span class="lang-divider">|</span>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+                <div class="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Events Section -->
+    <section id="events" class="events page-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="events.title">Мероприятия</h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="events-content">
+                <div class="events-carousel-wrapper">
+                    <button class="carousel-btn prev-btn" aria-label="Previous">‹</button>
+                    <div class="events-carousel">
+                        <div id="events-container" class="events-track">
+                            <!-- Events will be loaded dynamically -->
+                        </div>
+                    </div>
+                    <button class="carousel-btn next-btn" aria-label="Next">›</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/marsians-logo.jpg" alt="MARSIANS MCC">
+                </div>
+                <div class="footer-info">
+                    <p data-i18n="footer.subtitle">Мотоклуб спортсменов</p>
+                    <p>EST. 2019 | MCC STATUS 2022</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 MARSIANS MCC. <span data-i18n="footer.copyright">Все права защищены.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        // Initialize i18n when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            window.i18n.init();
+
+            // Load events on this page
+            loadEvents().then(() => {
+                setTimeout(initCarousel, 100);
+            });
+        });
+    </script>
+</body>
+</html>

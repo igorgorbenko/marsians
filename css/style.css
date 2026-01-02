@@ -913,6 +913,120 @@ section {
     letter-spacing: 0.5px;
 }
 
+/* =====================================================
+   MEMORIAL SECTION
+   ===================================================== */
+
+.memorial {
+    background: var(--primary-bg);
+}
+
+.memorial-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 60px;
+}
+
+.memorial-subtitle {
+    font-family: 'Nasalization', 'Arial', sans-serif;
+    font-size: 20px;
+    letter-spacing: 3px;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.memorial-description {
+    font-family: 'Nasalization', 'Arial', sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    letter-spacing: 0.5px;
+}
+
+.memorial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.memorial-card {
+    background: var(--secondary-bg);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.memorial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+    border-color: var(--accent-color);
+}
+
+.memorial-image {
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-color: var(--secondary-bg);
+    position: relative;
+    filter: grayscale(100%);
+}
+
+.memorial-image::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: linear-gradient(to top, var(--secondary-bg), transparent);
+}
+
+.memorial-info {
+    padding: 25px;
+    text-align: center;
+}
+
+.memorial-name {
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.memorial-nickname {
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.memorial-dates {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.memorial-text {
+    font-family: 'Nasalization', 'Arial', sans-serif;
+    font-size: 11px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    letter-spacing: 0.5px;
+}
+
+.memorial-empty {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
 /* ========================
    RESPONSIVE DESIGN
    ======================== */
@@ -959,6 +1073,10 @@ section {
     }
 
     .philosophy-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .memorial-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -1040,6 +1158,10 @@ section {
     }
 
     .philosophy-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .memorial-grid {
         grid-template-columns: 1fr;
     }
 
@@ -1245,6 +1367,15 @@ section {
     font-size: 10px;
     letter-spacing: 1px;
     color: var(--text-muted);
+}
+
+/* =====================================================
+   PAGE SECTIONS (for separate pages)
+   ===================================================== */
+
+.page-section {
+    min-height: 100vh;
+    padding: 150px 0 100px;
 }
 
 /* =====================================================

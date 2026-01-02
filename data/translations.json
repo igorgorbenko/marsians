@@ -2,11 +2,12 @@
   "ru": {
     "nav": {
       "about": "О клубе",
+      "philosophy": "Философия",
       "members": "Лица клуба",
       "events": "Мероприятия",
-      "philosophy": "Философия",
+      "memorial": "Мемориал",
       "geography": "География",
-      "membership": "Иерархия",
+      "membership": "Членство",
       "contact": "Контакты"
     },
     "hero": {
@@ -106,14 +107,20 @@
     "footer": {
       "subtitle": "Мотоклуб спортсменов",
       "copyright": "Все права защищены."
+    },
+    "memorial": {
+      "title": "Мемориал",
+      "subtitle": "В память о павших братьях",
+      "description": "Мы помним тех, кто разделял с нами дорогу, ценности и братство. Их путь завершился, но память о них живёт в наших сердцах."
     }
   },
   "en": {
     "nav": {
       "about": "About",
+      "philosophy": "Philosophy",
       "members": "Members",
       "events": "Events",
-      "philosophy": "Philosophy",
+      "memorial": "Memorial",
       "geography": "Geography",
       "membership": "Membership",
       "contact": "Contact"
@@ -215,6 +222,11 @@
     "footer": {
       "subtitle": "International Motorcycle Club",
       "copyright": "All rights reserved."
+    },
+    "memorial": {
+      "title": "Memorial",
+      "subtitle": "In Memory of Fallen Brothers",
+      "description": "We remember those who shared the road, values, and brotherhood with us. Their journey has ended, but the memory of them lives on in our hearts."
     }
   }
 }
