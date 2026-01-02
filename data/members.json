@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Алексей Кузьмич",
-    "nickname": "KUZMICH (NOMAD)",
+    "nickname": "KUZMICH",
     "role": "FIRST5",
     "position": "F5",
     "location": "NOMAD",
@@ -28,7 +28,7 @@
   },
   {
     "id": 4,
-    "name": "Кибардин Иван",
+    "name": "Иван Кибардин",
     "nickname": "KOBA4OK",
     "role": "FIRST5",
     "position": "F5",
@@ -37,7 +37,7 @@
   },
   {
     "id": 5,
-    "name": "Павлов Александр",
+    "name": "Александр Павлов",
     "nickname": "SANCHES",
     "role": "MEMBER",
     "location": "Волжский",
@@ -54,7 +54,7 @@
   {
     "id": 7,
     "name": "Влад Сычев",
-    "nickname": "MEHAN (NOMAD)",
+    "nickname": "MEHAN",
     "role": "MEMBER",
     "location": "NOMAD",
     "image": "images/members/member7.jpg"
