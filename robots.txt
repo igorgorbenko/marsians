@@ -1,0 +1,29 @@
+# robots.txt for MARSIANS MCC
+# https://marsians-mcc.com
+
+User-agent: *
+Allow: /
+
+# Disallow access to data files and configuration
+Disallow: /data/
+Disallow: /.git/
+Disallow: /.idea/
+Disallow: /node_modules/
+
+# Allow access to CSS and JavaScript
+Allow: /css/
+Allow: /js/
+Allow: /images/
+
+# Sitemap location
+Sitemap: https://marsians-mcc.com/sitemap.xml
+
+# Crawl-delay for specific bots (optional)
+User-agent: Googlebot
+Crawl-delay: 0
+
+User-agent: Bingbot
+Crawl-delay: 0
+
+User-agent: Yandex
+Crawl-delay: 0
