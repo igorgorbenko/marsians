@@ -217,10 +217,14 @@ async function loadMembers() {
 
         if (first5Container) {
             first5Container.innerHTML = first5.map(member => `
-                <div class="first5-item">
-                    <div class="first5-position">F5.</div>
-                    <div class="first5-nickname">${member.nickname}</div>
-                    <div class="first5-name">${member.name} (${member.location})</div>
+                <div class="member-card first5-card">
+                    <div class="member-image" style="background-image: url('${member.image}')"></div>
+                    <div class="member-info">
+                        <div class="member-badge">F5</div>
+                        <h3 class="member-nickname">${member.nickname}</h3>
+                        <div class="member-name">${member.name}</div>
+                        <div class="member-location">${member.location}</div>
+                    </div>
                 </div>
             `).join('');
         }

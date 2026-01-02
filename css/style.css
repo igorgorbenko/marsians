@@ -1092,54 +1092,37 @@ section {
     text-transform: uppercase;
 }
 
-.first5-list {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.first5-item {
-    display: flex;
-    align-items: center;
+.first5-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    background: var(--secondary-bg);
-    border: 1px solid var(--border-color);
-    padding: 20px 30px;
-    transition: all 0.3s ease;
 }
 
-.first5-item:hover {
-    border-color: var(--text-primary);
-    transform: translateX(5px);
-    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.1);
+.first5-card {
+    border: 2px solid var(--accent-color);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
 }
 
-.first5-position {
-    font-family: 'Nasalization', 'Arial', sans-serif;
-    font-size: 18px;
+.first5-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--accent-color);
+}
+
+.member-badge {
+    display: inline-block;
+    font-size: 10px;
     font-weight: 700;
-    color: var(--text-primary);
     letter-spacing: 2px;
-    min-width: 40px;
-}
-
-.first5-nickname {
-    font-family: 'Nasalization', 'Arial', sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    color: var(--text-primary);
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    min-width: 200px;
-}
-
-.first5-name {
-    font-family: 'Nasalization', 'Arial', sans-serif;
-    font-size: 12px;
-    color: var(--text-secondary);
-    letter-spacing: 1px;
+    color: var(--primary-bg);
+    background: var(--accent-color);
+    padding: 4px 12px;
+    margin-bottom: 10px;
+    text-shadow: none;
 }
 
 /* Members Carousel Section */
@@ -1376,16 +1359,15 @@ section {
     }
 }
 
-@media (max-width: 768px) {
-    .first5-item {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-        padding: 15px 20px;
+@media (max-width: 968px) {
+    .first5-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
+}
 
-    .first5-nickname {
-        min-width: auto;
+@media (max-width: 768px) {
+    .first5-grid {
+        grid-template-columns: 1fr;
     }
 
     .member-card {
