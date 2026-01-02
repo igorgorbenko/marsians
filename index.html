@@ -30,14 +30,19 @@
                     <span class="logo-mcc">MCC</span>
                 </div>
                 <ul class="nav-menu">
-                    <li><a href="#about">О клубе</a></li>
-                    <li><a href="#members">Лица клуба</a></li>
-                    <li><a href="#events">Мероприятия</a></li>
-                    <li><a href="#philosophy">Философия</a></li>
-                    <li><a href="#geography">География</a></li>
-                    <li><a href="#membership">Членство</a></li>
-                    <li><a href="#contact">Контакты</a></li>
+                    <li><a href="#about" data-i18n="nav.about">О клубе</a></li>
+                    <li><a href="#members" data-i18n="nav.members">Лица клуба</a></li>
+                    <li><a href="#events" data-i18n="nav.events">Мероприятия</a></li>
+                    <li><a href="#philosophy" data-i18n="nav.philosophy">Философия</a></li>
+                    <li><a href="#geography" data-i18n="nav.geography">География</a></li>
+                    <li><a href="#membership" data-i18n="nav.membership">Членство</a></li>
+                    <li><a href="#contact" data-i18n="nav.contact">Контакты</a></li>
                 </ul>
+                <div class="lang-switcher">
+                    <button class="lang-btn active" data-lang="ru">RU</button>
+                    <span class="lang-divider">|</span>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
                 <div class="burger">
                     <span></span>
                     <span></span>
@@ -52,9 +57,9 @@
         <div class="hero-overlay"></div>
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">MARSIANS MCC</h1>
-                <p class="hero-subtitle">Мотоклуб спортсменов</p>
-                <div class="hero-date">EST. 19.07.2019 | MCC STATUS 08.12.2022</div>
+                <h1 class="hero-title" data-i18n="hero.title">MARSIANS MCC</h1>
+                <p class="hero-subtitle" data-i18n="hero.subtitle">Мотоклуб спортсменов</p>
+                <div class="hero-date" data-i18n="hero.date">EST. 19.07.2019 | MCC STATUS 08.12.2022</div>
             </div>
         </div>
         <div class="scroll-indicator">
@@ -66,27 +71,29 @@
     <section id="about" class="about">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">О клубе</h2>
+                <h2 class="section-title" data-i18n="about.title">О клубе</h2>
                 <div class="title-line"></div>
             </div>
             <div class="about-content">
                 <div class="about-text">
-                    <p>MARSIANS MCC — это мотоклуб созданный спортсменами и для спортсменов на базе гоночной серии MOTO RALLY CUP и MOTO RIDERS CLUB.</p>
-                    <p>Клуб объединяет спортсменов из различных дисциплин: ралли, ралли-рейды, кольцевые гонки, мотокросс, эндуро, трофи-рейды, карате, бокс и других видов спорта.</p>
-                    <p>Мы создаём сообщество единомышленников, объединённых страстью к мотоциклам и активному образу жизни.</p>
+                    <p data-i18n="about.intro">MARSIANS MCC — международный мотоциклетный клуб, объединяющий спортсменов ралли-рейдов, эндуро, мотокросса, трофи, кольцевых гонок и мото-путешественников.</p>
+                    <p data-i18n="about.history">Клуб сформировался в 2019 году на базе спортивного движения Moto Rally Cup, а в декабре 2022 года получил официальный статус MCC.</p>
+                    <p data-i18n="about.founder">Founder (основатель) — Алексей Кузьмич (KUZMICH) - профессиональный гонщик, МСМК (Мастер спорта международного класса), девятикратный участник ралли-марафона «DAKAR».</p>
+                    <p data-i18n="about.members">Действующие спортсмены и ветераны ралли, ралли-рейдов, единоборств и других спорт дисциплин; мото-путешественники и энтузиасты подготовки техники; команда, где ценятся опыт, взаимовыручка и честный спорт.</p>
+                    <p data-i18n="about.mission">MARSIANS MCC создан для тех, кто видит в мотоцикле не просто средство передвижения, а символ свободы, силы и движения вперёд. Мы строим Клуб будущего: спортивное, открытое и международное сообщество, объединяющее сильных и целеустремлённых райдеров.</p>
                 </div>
                 <div class="about-stats">
                     <div class="stat-item">
                         <div class="stat-number">2019</div>
-                        <div class="stat-label">Год основания</div>
+                        <div class="stat-label" data-i18n="about.stats.founded">Год основания</div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-number">2022</div>
-                        <div class="stat-label">Статус MCC</div>
+                        <div class="stat-label" data-i18n="about.stats.mcc">Статус MCC</div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-number">10+</div>
-                        <div class="stat-label">Стран</div>
+                        <div class="stat-label" data-i18n="about.stats.countries">Стран</div>
                     </div>
                 </div>
             </div>
@@ -97,7 +104,7 @@
     <section id="members" class="members">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Лица клуба</h2>
+                <h2 class="section-title" data-i18n="members.title">Лица клуба</h2>
                 <div class="title-line"></div>
             </div>
             <div class="members-content">
@@ -112,7 +119,7 @@
     <section id="events" class="events">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Мероприятия</h2>
+                <h2 class="section-title" data-i18n="events.title">Мероприятия</h2>
                 <div class="title-line"></div>
             </div>
             <div class="events-content">
@@ -133,34 +140,42 @@
     <section id="philosophy" class="philosophy">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Философия и цели</h2>
+                <h2 class="section-title" data-i18n="philosophy.title">Философия и ценности</h2>
                 <div class="title-line"></div>
             </div>
             <div class="philosophy-content">
                 <div class="philosophy-grid">
                     <div class="philosophy-card">
-                        <h3>Объединение райдеров</h3>
-                        <p>Создание активного сообщества мотоциклистов и спортсменов, объединенных общими ценностями и любовью к мотоциклам.</p>
+                        <h3 data-i18n="philosophy.sport.title">Спорт и дисциплина</h3>
+                        <p data-i18n="philosophy.sport.text">Постоянное развитие навыков и формы.</p>
                     </div>
                     <div class="philosophy-card">
-                        <h3>Инь и Янь</h3>
-                        <p>Черный и белый цвета логотипа - две противоположности, борющиеся и существующие только вместе. Основа космогенеза в китайской философии.</p>
+                        <h3 data-i18n="philosophy.brotherhood.title">Товарищество</h3>
+                        <p data-i18n="philosophy.brotherhood.text">Поддержка и доверие на дороге и в жизни.</p>
                     </div>
                     <div class="philosophy-card">
-                        <h3>Мотоциклетные традиции</h3>
-                        <p>Двигатель BigTwin Harley-Davidson Evolution - символ красоты инженерной мысли, традиций и уважения к истории мотоциклов.</p>
+                        <h3 data-i18n="philosophy.respect.title">Ответственность и уважение</h3>
+                        <p data-i18n="philosophy.respect.text">К правилам, к дороге, к сообществу.</p>
                     </div>
                     <div class="philosophy-card">
-                        <h3>Взаимопомощь и защита</h3>
-                        <p>Мечи-катаны на логотипе - готовность встать на защиту себя, своей семьи, клуба и братьев. Искусство и сила одновременно.</p>
+                        <h3 data-i18n="philosophy.international.title">Международность</h3>
+                        <p data-i18n="philosophy.international.text">Открытость к людям разных культур и стран.</p>
                     </div>
                     <div class="philosophy-card">
-                        <h3>Раллийное наследие</h3>
-                        <p>Накапотник на логотипе - дань истории зарождения клуба в ралли, ралли-рейдах и гонках MOTO RALLY CUP (MRC → MaRSians).</p>
+                        <h3 data-i18n="philosophy.yinyang.title">Инь и Янь</h3>
+                        <p data-i18n="philosophy.yinyang.text">Черный и белый цвета логотипа - две противоположности, борющиеся и существующие только вместе. Основа космогенеза в китайской философии.</p>
                     </div>
                     <div class="philosophy-card">
-                        <h3>Развитие и совершенство</h3>
-                        <p>Постоянное совершенствование мастерства вождения, обмен опытом, организация тренировок и соревнований.</p>
+                        <h3 data-i18n="philosophy.traditions.title">Мотоциклетные традиции</h3>
+                        <p data-i18n="philosophy.traditions.text">Двигатель BigTwin Harley-Davidson Evolution - символ красоты инженерной мысли, традиций и уважения к истории мотоциклов.</p>
+                    </div>
+                    <div class="philosophy-card">
+                        <h3 data-i18n="philosophy.protection.title">Взаимопомощь и защита</h3>
+                        <p data-i18n="philosophy.protection.text">Мечи-катаны на логотипе - готовность встать на защиту себя, своей семьи, клуба и братьев. Искусство и сила одновременно.</p>
+                    </div>
+                    <div class="philosophy-card">
+                        <h3 data-i18n="philosophy.rally.title">Раллийное наследие</h3>
+                        <p data-i18n="philosophy.rally.text">Накапотник на логотипе - дань истории зарождения клуба в ралли, ралли-рейдах и гонках MOTO RALLY CUP (MRC → MaRSians).</p>
                     </div>
                 </div>
             </div>
@@ -171,29 +186,43 @@
     <section id="geography" class="geography">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">География клуба</h2>
+                <h2 class="section-title" data-i18n="geography.title">География клуба</h2>
                 <div class="title-line"></div>
             </div>
             <div class="geography-content">
+                <p class="geography-intro" data-i18n="geography.intro">Сегодня MARSIANS MCC объединяет райдеров из разных стран и регионов:</p>
+                <div class="geography-countries">
+                    <span class="country-item" data-i18n="geography.countries.russia">🇷🇺 Россия</span>
+                    <span class="country-item" data-i18n="geography.countries.germany">🇩🇪 Германия</span>
+                    <span class="country-item" data-i18n="geography.countries.portugal">🇵🇹 Португалия</span>
+                    <span class="country-item" data-i18n="geography.countries.israel">🇮🇱 Израиль</span>
+                    <span class="country-item" data-i18n="geography.countries.saudi">🇸🇦 Саудовская Аравия</span>
+                    <span class="country-item" data-i18n="geography.countries.uae">🇦🇪 ОАЭ</span>
+                    <span class="country-item" data-i18n="geography.countries.ecuador">🇪🇨 Эквадор</span>
+                    <span class="country-item" data-i18n="geography.countries.algeria">🇩🇿 Алжир</span>
+                    <span class="country-item" data-i18n="geography.countries.armenia">🇦🇲 Армения</span>
+                    <span class="country-item" data-i18n="geography.countries.bosnia">🇧🇦 Босния и Герцеговина</span>
+                </div>
                 <div id="map" class="google-map"></div>
                 <div class="geography-stats">
                     <div class="stat-block">
                         <div class="stat-value">28</div>
-                        <div class="stat-desc">Городов</div>
+                        <div class="stat-desc" data-i18n="geography.stats.cities">Городов</div>
                     </div>
                     <div class="stat-block">
                         <div class="stat-value">10</div>
-                        <div class="stat-desc">Стран</div>
+                        <div class="stat-desc" data-i18n="geography.stats.countries">Стран</div>
                     </div>
                     <div class="stat-block">
                         <div class="stat-value">20</div>
-                        <div class="stat-desc">Городов России</div>
+                        <div class="stat-desc" data-i18n="geography.stats.russia">Городов России</div>
                     </div>
                     <div class="stat-block">
                         <div class="stat-value">8</div>
-                        <div class="stat-desc">Городов Подмосковья</div>
+                        <div class="stat-desc" data-i18n="geography.stats.moscow">Городов Подмосковья</div>
                     </div>
                 </div>
+                <p class="geography-outro" data-i18n="geography.outro">Такой охват делает MARSIANS уникальным международным MCC с представителями в Европе, на Ближнем Востоке, в Латинской Америке, Северной Африке.</p>
             </div>
         </div>
     </section>
@@ -202,14 +231,14 @@
     <section id="membership" class="membership">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Членство</h2>
+                <h2 class="section-title" data-i18n="membership.title">Членство</h2>
                 <div class="title-line"></div>
             </div>
             <div class="membership-content">
                 <div class="membership-info">
-                    <h3>Иерархия членства</h3>
-                    <p>Членами клуба могут стать мужчины-спортсмены любого направления и на мотоциклах любых типов.</p>
-                    <p>Женщины могут участвовать в жизни клуба только в статусе SUPPORT.</p>
+                    <h3 data-i18n="membership.hierarchy">Иерархия членства</h3>
+                    <p data-i18n="membership.info1">Членами клуба могут стать мужчины-спортсмены любого направления и на мотоциклах любых типов.</p>
+                    <p data-i18n="membership.info2">Женщины могут участвовать в жизни клуба только в статусе SUPPORT.</p>
                 </div>
                 <div class="membership-path">
                     <div class="path-line">
@@ -233,7 +262,7 @@
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Контакты</h2>
+                <h2 class="section-title" data-i18n="contact.title">Контакты</h2>
                 <div class="title-line"></div>
             </div>
             <div class="contact-content">
@@ -245,7 +274,7 @@
                         </svg>
                     </div>
                     <div class="contact-details">
-                        <h4>Email</h4>
+                        <h4 data-i18n="contact.email">Email</h4>
                         <a href="mailto:motorallycup@yandex.ru">motorallycup@yandex.ru</a>
                     </div>
                 </div>
@@ -257,8 +286,8 @@
                         </svg>
                     </div>
                     <div class="contact-details">
-                        <h4>WhatsApp</h4>
-                        <p>Контакты FIRST5 руководства</p>
+                        <h4 data-i18n="contact.whatsapp">WhatsApp</h4>
+                        <p data-i18n="contact.first5">Контакты FIRST5 руководства</p>
                     </div>
                 </div>
                 <div class="contact-socials">
@@ -285,17 +314,24 @@
                     <img src="images/marsians-logo.jpg" alt="MARSIANS MCC">
                 </div>
                 <div class="footer-info">
-                    <p>Мотоклуб спортсменов</p>
+                    <p data-i18n="footer.subtitle">Мотоклуб спортсменов</p>
                     <p>EST. 2019 | MCC STATUS 2022</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 MARSIANS MCC. Все права защищены.</p>
+                <p>&copy; 2025 MARSIANS MCC. <span data-i18n="footer.copyright">Все права защищены.</span></p>
             </div>
         </div>
     </footer>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/i18n.js"></script>
     <script src="js/script.js"></script>
+    <script>
+        // Initialize i18n when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            window.i18n.init();
+        });
+    </script>
 </body>
 </html>

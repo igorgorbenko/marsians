@@ -1,0 +1,224 @@
+{
+  "ru": {
+    "nav": {
+      "about": "О клубе",
+      "members": "Лица клуба",
+      "events": "Мероприятия",
+      "philosophy": "Философия",
+      "geography": "География",
+      "membership": "Членство",
+      "contact": "Контакты"
+    },
+    "hero": {
+      "title": "MARSIANS MCC",
+      "subtitle": "Мотоклуб спортсменов",
+      "date": "EST. 19.07.2019 | MCC STATUS 08.12.2022"
+    },
+    "about": {
+      "title": "О клубе",
+      "intro": "MARSIANS MCC — международный мотоциклетный клуб, объединяющий спортсменов ралли-рейдов, эндуро, мотокросса, трофи, кольцевых гонок и мото-путешественников.",
+      "history": "Клуб сформировался в 2019 году на базе спортивного движения Moto Rally Cup, а в декабре 2022 года получил официальный статус MCC.",
+      "founder": "Founder (основатель) — Алексей Кузьмич (KUZMICH) - профессиональный гонщик, МСМК (Мастер спорта международного класса), девятикратный участник ралли-марафона «DAKAR».",
+      "members": "Действующие спортсмены и ветераны ралли, ралли-рейдов, единоборств и других спорт дисциплин; мото-путешественники и энтузиасты подготовки техники; команда, где ценятся опыт, взаимовыручка и честный спорт.",
+      "mission": "MARSIANS MCC создан для тех, кто видит в мотоцикле не просто средство передвижения, а символ свободы, силы и движения вперёд. Мы строим Клуб будущего: спортивное, открытое и международное сообщество, объединяющее сильных и целеустремлённых райдеров.",
+      "stats": {
+        "founded": "Год основания",
+        "mcc": "Статус MCC",
+        "countries": "Стран"
+      }
+    },
+    "philosophy": {
+      "title": "Философия и ценности",
+      "values_title": "Наши ценности",
+      "mission_title": "Миссия",
+      "sport": {
+        "title": "Спорт и дисциплина",
+        "text": "Постоянное развитие навыков и формы."
+      },
+      "brotherhood": {
+        "title": "Товарищество",
+        "text": "Поддержка и доверие на дороге и в жизни."
+      },
+      "respect": {
+        "title": "Ответственность и уважение",
+        "text": "К правилам, к дороге, к сообществу."
+      },
+      "international": {
+        "title": "Международность",
+        "text": "Открытость к людям разных культур и стран."
+      },
+      "yinyang": {
+        "title": "Инь и Янь",
+        "text": "Черный и белый цвета логотипа - две противоположности, борющиеся и существующие только вместе. Основа космогенеза в китайской философии."
+      },
+      "traditions": {
+        "title": "Мотоциклетные традиции",
+        "text": "Двигатель BigTwin Harley-Davidson Evolution - символ красоты инженерной мысли, традиций и уважения к истории мотоциклов."
+      },
+      "protection": {
+        "title": "Взаимопомощь и защита",
+        "text": "Мечи-катаны на логотипе - готовность встать на защиту себя, своей семьи, клуба и братьев. Искусство и сила одновременно."
+      },
+      "rally": {
+        "title": "Раллийное наследие",
+        "text": "Накапотник на логотипе - дань истории зарождения клуба в ралли, ралли-рейдах и гонках MOTO RALLY CUP (MRC → MaRSians)."
+      }
+    },
+    "geography": {
+      "title": "География клуба",
+      "intro": "Сегодня MARSIANS MCC объединяет райдеров из разных стран и регионов:",
+      "outro": "Такой охват делает MARSIANS уникальным международным MCC с представителями в Европе, на Ближнем Востоке, в Латинской Америке, Северной Африке.",
+      "countries": {
+        "russia": "🇷🇺 Россия",
+        "germany": "🇩🇪 Германия",
+        "portugal": "🇵🇹 Португалия",
+        "israel": "🇮🇱 Израиль",
+        "saudi": "🇸🇦 Саудовская Аравия",
+        "uae": "🇦🇪 ОАЭ",
+        "ecuador": "🇪🇨 Эквадор",
+        "algeria": "🇩🇿 Алжир",
+        "armenia": "🇦🇲 Армения",
+        "bosnia": "🇧🇦 Босния и Герцеговина"
+      },
+      "stats": {
+        "cities": "Городов",
+        "countries": "Стран",
+        "russia": "Городов России",
+        "moscow": "Городов Подмосковья"
+      }
+    },
+    "membership": {
+      "title": "Членство",
+      "hierarchy": "Иерархия членства",
+      "info1": "Членами клуба могут стать мужчины-спортсмены любого направления и на мотоциклах любых типов.",
+      "info2": "Женщины могут участвовать в жизни клуба только в статусе SUPPORT."
+    },
+    "members": {
+      "title": "Лица клуба"
+    },
+    "events": {
+      "title": "Мероприятия"
+    },
+    "contact": {
+      "title": "Контакты",
+      "email": "Email",
+      "whatsapp": "WhatsApp",
+      "first5": "Контакты FIRST5 руководства"
+    },
+    "footer": {
+      "subtitle": "Мотоклуб спортсменов",
+      "copyright": "Все права защищены."
+    }
+  },
+  "en": {
+    "nav": {
+      "about": "About",
+      "members": "Members",
+      "events": "Events",
+      "philosophy": "Philosophy",
+      "geography": "Geography",
+      "membership": "Membership",
+      "contact": "Contact"
+    },
+    "hero": {
+      "title": "MARSIANS MCC",
+      "subtitle": "International Motorcycle Club",
+      "date": "EST. 19.07.2019 | MCC STATUS 08.12.2022"
+    },
+    "about": {
+      "title": "About the Club",
+      "intro": "MARSIANS MCC is an international motorcycle club uniting rally raid racers, enduro and motocross riders, trophy and circuit competitors, and motorcycle travelers.",
+      "history": "Founded in 2019 from the Moto Rally Cup (MRC) movement, the club officially became an MCC in December 2022.",
+      "founder": "Founder — Alexey Kuzmich (KUZMICH), professional racer, Master of Sports International Class, 9-time \"Dakar\" Rally participant.",
+      "members": "Active athletes and veterans of rally, rally-raids, martial arts and other sports disciplines; motorcycle travelers and technical preparation enthusiasts; a team where experience, mutual support and honest sport are valued.",
+      "mission": "MARSIANS MCC is created for those who see motorcycles not just as vehicles, but as symbols of freedom, strength, and progress. We are building the Club of the Future: an open, professional, and international motorcycle community uniting strong and determined riders.",
+      "stats": {
+        "founded": "Year Founded",
+        "mcc": "MCC Status",
+        "countries": "Countries"
+      }
+    },
+    "philosophy": {
+      "title": "Philosophy and Values",
+      "values_title": "Our Values",
+      "mission_title": "Mission",
+      "sport": {
+        "title": "Sport and Discipline",
+        "text": "Continuous development of skills and fitness."
+      },
+      "brotherhood": {
+        "title": "Brotherhood",
+        "text": "Support and trust on the road and in life."
+      },
+      "respect": {
+        "title": "Responsibility and Respect",
+        "text": "To rules, to the road, to the community."
+      },
+      "international": {
+        "title": "International Spirit",
+        "text": "Openness to people of different cultures and countries."
+      },
+      "yinyang": {
+        "title": "Yin and Yang",
+        "text": "Black and white colors of the logo - two opposites, fighting and existing only together. The basis of cosmogenesis in Chinese philosophy."
+      },
+      "traditions": {
+        "title": "Motorcycle Traditions",
+        "text": "BigTwin Harley-Davidson Evolution engine - symbol of engineering beauty, traditions and respect for motorcycle history."
+      },
+      "protection": {
+        "title": "Mutual Support and Protection",
+        "text": "Katana swords on the logo - readiness to defend oneself, family, club and brothers. Art and power combined."
+      },
+      "rally": {
+        "title": "Rally Heritage",
+        "text": "Hood scoop on the logo - tribute to the club's origin in rally, rally-raids and MOTO RALLY CUP races (MRC → MaRSians)."
+      }
+    },
+    "geography": {
+      "title": "Club Geography",
+      "intro": "Today MARSIANS MCC unites riders from different countries and regions:",
+      "outro": "This reach makes MARSIANS a unique international MCC with representatives in Europe, the Middle East, Latin America, and North Africa.",
+      "countries": {
+        "russia": "🇷🇺 Russia",
+        "germany": "🇩🇪 Germany",
+        "portugal": "🇵🇹 Portugal",
+        "israel": "🇮🇱 Israel",
+        "saudi": "🇸🇦 Saudi Arabia",
+        "uae": "🇦🇪 UAE",
+        "ecuador": "🇪🇨 Ecuador",
+        "algeria": "🇩🇿 Algeria",
+        "armenia": "🇦🇲 Armenia",
+        "bosnia": "🇧🇦 Bosnia and Herzegovina"
+      },
+      "stats": {
+        "cities": "Cities",
+        "countries": "Countries",
+        "russia": "Russian Cities",
+        "moscow": "Moscow Region Cities"
+      }
+    },
+    "membership": {
+      "title": "Membership",
+      "hierarchy": "Membership Hierarchy",
+      "info1": "Male athletes of any discipline and on any type of motorcycle can become club members.",
+      "info2": "Women can participate in club life only in SUPPORT status."
+    },
+    "members": {
+      "title": "Club Members"
+    },
+    "events": {
+      "title": "Events"
+    },
+    "contact": {
+      "title": "Contact",
+      "email": "Email",
+      "whatsapp": "WhatsApp",
+      "first5": "FIRST5 Leadership Contacts"
+    },
+    "footer": {
+      "subtitle": "International Motorcycle Club",
+      "copyright": "All rights reserved."
+    }
+  }
+}
