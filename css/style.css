@@ -418,12 +418,13 @@ section {
 }
 
 .philosophy-card h3 {
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: 15px;
     color: var(--text-primary);
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
     position: relative;
     z-index: 1;
+    line-height: 1.4;
 }
 
 .philosophy-card p {
