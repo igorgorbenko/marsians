@@ -94,7 +94,8 @@
       "info2": "Женщины могут участвовать в жизни клуба только в статусе SUPPORT."
     },
     "members": {
-      "title": "Лица клуба"
+      "title": "Лица клуба",
+      "subtitle": "Члены клуба"
     },
     "events": {
       "title": "Мероприятия"
@@ -205,7 +206,8 @@
       "info2": "Women can participate in club life only in SUPPORT status."
     },
     "members": {
-      "title": "Club Members"
+      "title": "Club Members",
+      "subtitle": "Members"
     },
     "events": {
       "title": "Events"

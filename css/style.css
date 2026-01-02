@@ -1073,14 +1073,110 @@ section {
     background: var(--primary-bg);
 }
 
-.members-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
+.members-content {
     margin-top: 50px;
 }
 
+/* FIRST5 Section */
+.first5-section {
+    margin-bottom: 80px;
+}
+
+.first5-title {
+    font-family: 'Nasalization', 'Arial', sans-serif;
+    font-size: 24px;
+    letter-spacing: 4px;
+    color: var(--text-primary);
+    text-align: center;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.first5-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.first5-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: var(--secondary-bg);
+    border: 1px solid var(--border-color);
+    padding: 20px 30px;
+    transition: all 0.3s ease;
+}
+
+.first5-item:hover {
+    border-color: var(--text-primary);
+    transform: translateX(5px);
+    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.1);
+}
+
+.first5-position {
+    font-family: 'Nasalization', 'Arial', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: 2px;
+    min-width: 40px;
+}
+
+.first5-nickname {
+    font-family: 'Nasalization', 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-primary);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    min-width: 200px;
+}
+
+.first5-name {
+    font-family: 'Nasalization', 'Arial', sans-serif;
+    font-size: 12px;
+    color: var(--text-secondary);
+    letter-spacing: 1px;
+}
+
+/* Members Carousel Section */
+.members-carousel-section {
+    margin-top: 60px;
+}
+
+.members-subtitle {
+    font-family: 'Nasalization', 'Arial', sans-serif;
+    font-size: 18px;
+    letter-spacing: 3px;
+    color: var(--text-primary);
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.members-carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.members-carousel {
+    flex: 1;
+    overflow: hidden;
+}
+
+.members-carousel-track {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease;
+}
+
 .member-card {
+    flex: 0 0 calc((100% - 80px) / 5);
     background: var(--secondary-bg);
     border: 1px solid var(--border-color);
     overflow: hidden;
@@ -1092,21 +1188,6 @@ section {
     transform: translateY(-5px);
     box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
     border-color: var(--accent-color);
-}
-
-.member-card.first5 {
-    border: 2px solid var(--accent-color);
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-}
-
-.member-card.first5::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: var(--accent-color);
 }
 
 .member-image {
@@ -1130,49 +1211,29 @@ section {
 
 .member-info {
     padding: 15px;
+    text-align: center;
 }
 
-.member-role {
-    font-size: 9px;
+.member-nickname {
+    font-size: 14px;
     letter-spacing: 2px;
-    color: var(--accent-color);
-    margin-bottom: 6px;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    text-transform: uppercase;
     font-weight: 500;
 }
 
-.member-card.first5 .member-role {
-    font-weight: 700;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-}
-
 .member-name {
-    font-size: 14px;
+    font-size: 11px;
     letter-spacing: 1px;
+    color: var(--text-secondary);
     margin-bottom: 5px;
-    color: var(--accent-color);
 }
 
-.member-title {
+.member-location {
     font-size: 10px;
-    color: #cccccc;
-    margin-bottom: 8px;
-    letter-spacing: 0.5px;
-}
-
-.member-achievements {
-    font-size: 9px;
-    color: #999999;
-    margin-bottom: 8px;
-    line-height: 1.5;
-    font-family: 'Roboto', Arial, sans-serif;
-}
-
-.member-bike {
-    font-size: 9px;
-    color: #666666;
-    letter-spacing: 0.5px;
-    padding-top: 8px;
-    border-top: 1px solid #333333;
+    letter-spacing: 1px;
+    color: var(--text-muted);
 }
 
 /* =====================================================
@@ -1316,9 +1377,19 @@ section {
 }
 
 @media (max-width: 768px) {
-    .members-grid {
-        grid-template-columns: 1fr;
-        gap: 25px;
+    .first5-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 15px 20px;
+    }
+
+    .first5-nickname {
+        min-width: auto;
+    }
+
+    .member-card {
+        flex: 0 0 100%;
     }
 
     .event-card {
@@ -1331,7 +1402,8 @@ section {
         font-size: 30px;
     }
 
-    .events-carousel-wrapper {
+    .events-carousel-wrapper,
+    .members-carousel-wrapper {
         gap: 10px;
     }
 

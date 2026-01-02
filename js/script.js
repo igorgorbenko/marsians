@@ -205,30 +205,45 @@ async function loadEvents() {
     }
 }
 
-// Load and display members (FIRST5 only)
+// Load and display members
 async function loadMembers() {
     try {
         const response = await fetch('data/members.json');
         const members = await response.json();
-        const membersContainer = document.getElementById('members-container');
 
-        if (!membersContainer) return;
-
-        // Show only FIRST5 members
+        // Load FIRST5
+        const first5Container = document.getElementById('first5-container');
         const first5 = members.filter(m => m.role === 'FIRST5');
 
-        membersContainer.innerHTML = first5.map(member => `
-            <div class="member-card first5">
-                <div class="member-image" style="background-image: url('${member.image}')"></div>
-                <div class="member-info">
-                    <div class="member-role">${member.role}</div>
-                    <h3 class="member-name">${member.name}</h3>
-                    <div class="member-title">${member.title}</div>
-                    <div class="member-achievements">${member.achievements}</div>
-                    <div class="member-bike">${member.bike}</div>
+        if (first5Container) {
+            first5Container.innerHTML = first5.map(member => `
+                <div class="first5-item">
+                    <div class="first5-position">F5.</div>
+                    <div class="first5-nickname">${member.nickname}</div>
+                    <div class="first5-name">${member.name} (${member.location})</div>
                 </div>
-            </div>
-        `).join('');
+            `).join('');
+        }
+
+        // Load regular members for carousel
+        const membersContainer = document.getElementById('members-container');
+        const regularMembers = members.filter(m => m.role === 'MEMBER');
+
+        if (membersContainer) {
+            membersContainer.innerHTML = regularMembers.map(member => `
+                <div class="member-card">
+                    <div class="member-image" style="background-image: url('${member.image}')"></div>
+                    <div class="member-info">
+                        <h3 class="member-nickname">${member.nickname}</h3>
+                        <div class="member-name">${member.name}</div>
+                        <div class="member-location">${member.location}</div>
+                    </div>
+                </div>
+            `).join('');
+
+            // Initialize members carousel after loading
+            setTimeout(initMembersCarousel, 100);
+        }
     } catch (error) {
         console.error('Error loading members:', error);
     }
@@ -358,6 +373,113 @@ function updateCarousel() {
     nextBtn.disabled = currentSlide >= totalSlides - cardsPerView;
 }
 
+// Members Carousel
+let currentMemberSlide = 0;
+let totalMemberSlides = 0;
+
+function getMemberCardsPerView() {
+    // Show 5 cards on desktop, 1 on mobile
+    if (window.innerWidth <= 768) return 1;
+    return 5;
+}
+
+function initMembersCarousel() {
+    const prevBtn = document.querySelector('.members-prev');
+    const nextBtn = document.querySelector('.members-next');
+    const track = document.getElementById('members-container');
+
+    if (!track || !track.children.length) return;
+
+    totalMemberSlides = track.children.length;
+    currentMemberSlide = 0;
+
+    // Add click handlers
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            if (currentMemberSlide > 0) {
+                currentMemberSlide--;
+                updateMembersCarousel();
+            }
+        });
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            const cardsPerView = getMemberCardsPerView();
+            if (currentMemberSlide < totalMemberSlides - cardsPerView) {
+                currentMemberSlide++;
+                updateMembersCarousel();
+            }
+        });
+    }
+
+    // Add mouse wheel scroll
+    const carousel = track.parentElement;
+    if (carousel) {
+        carousel.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            const cardsPerView = getMemberCardsPerView();
+            if (e.deltaY > 0 && currentMemberSlide < totalMemberSlides - cardsPerView) {
+                currentMemberSlide++;
+                updateMembersCarousel();
+            } else if (e.deltaY < 0 && currentMemberSlide > 0) {
+                currentMemberSlide--;
+                updateMembersCarousel();
+            }
+        });
+
+        // Add touch swipe support
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        carousel.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        carousel.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleMembersSwipe();
+        });
+
+        function handleMembersSwipe() {
+            const cardsPerView = getMemberCardsPerView();
+            if (touchStartX - touchEndX > 50 && currentMemberSlide < totalMemberSlides - cardsPerView) {
+                currentMemberSlide++;
+                updateMembersCarousel();
+            } else if (touchEndX - touchStartX > 50 && currentMemberSlide > 0) {
+                currentMemberSlide--;
+                updateMembersCarousel();
+            }
+        }
+    }
+
+    updateMembersCarousel();
+}
+
+function updateMembersCarousel() {
+    const track = document.getElementById('members-container');
+    const prevBtn = document.querySelector('.members-prev');
+    const nextBtn = document.querySelector('.members-next');
+
+    if (!track || !track.children.length) return;
+
+    const cardsPerView = getMemberCardsPerView();
+
+    // Calculate card width including gap
+    const carousel = track.parentElement;
+    const carouselWidth = carousel.offsetWidth;
+    const gap = 20;
+    const cardWidth = (carouselWidth - (cardsPerView - 1) * gap) / cardsPerView;
+
+    // Move by one card width + gap
+    const offset = currentMemberSlide * -(cardWidth + gap);
+    track.style.transform = `translateX(${offset}px)`;
+
+    // Update button states
+    if (prevBtn) prevBtn.disabled = currentMemberSlide === 0;
+    if (nextBtn) nextBtn.disabled = currentMemberSlide >= totalMemberSlides - cardsPerView;
+}
+
 // Load data when page loads
 document.addEventListener('DOMContentLoaded', () => {
     loadEvents().then(() => {
@@ -367,5 +489,8 @@ document.addEventListener('DOMContentLoaded', () => {
     loadMembers();
 });
 
-// Update carousel on window resize
-window.addEventListener('resize', updateCarousel);
+// Update carousels on window resize
+window.addEventListener('resize', () => {
+    updateCarousel();
+    updateMembersCarousel();
+});

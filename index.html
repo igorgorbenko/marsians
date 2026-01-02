@@ -108,8 +108,34 @@
                 <div class="title-line"></div>
             </div>
             <div class="members-content">
-                <div id="members-container" class="members-grid">
-                    <!-- Members will be loaded dynamically -->
+                <!-- FIRST5 Section -->
+                <div class="first5-section">
+                    <h3 class="first5-title">FIRST 5</h3>
+                    <div id="first5-container" class="first5-list">
+                        <!-- FIRST5 will be loaded dynamically -->
+                    </div>
+                </div>
+
+                <!-- Members Carousel -->
+                <div class="members-carousel-section">
+                    <h3 class="members-subtitle" data-i18n="members.subtitle">Члены клуба</h3>
+                    <div class="members-carousel-wrapper">
+                        <button class="carousel-btn prev-btn members-prev" aria-label="Previous">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <div class="members-carousel">
+                            <div id="members-container" class="members-carousel-track">
+                                <!-- Members will be loaded dynamically -->
+                            </div>
+                        </div>
+                        <button class="carousel-btn next-btn members-next" aria-label="Next">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,92 +1,118 @@
 [
   {
     "id": 1,
-    "name": "Имя Фамилия",
+    "name": "Алексей Кузьмич",
+    "nickname": "KUZMICH (NOMAD)",
     "role": "FIRST5",
-    "title": "Основатель клуба",
-    "achievements": "Чемпион MOTO RALLY CUP 2019-2023",
-    "image": "images/members/member1.jpg",
-    "bike": "Harley-Davidson"
+    "position": "F5",
+    "location": "NOMAD",
+    "image": "images/members/member1.jpg"
   },
   {
     "id": 2,
-    "name": "Имя Фамилия",
+    "name": "Григорий Медведев",
+    "nickname": "GREGOR",
     "role": "FIRST5",
-    "title": "Вице-президент",
-    "achievements": "Мастер спорта по мотокроссу",
-    "image": "images/members/member2.jpg",
-    "bike": "BMW R1250GS"
+    "position": "F5",
+    "location": "Москва",
+    "image": "images/members/member2.jpg"
   },
   {
     "id": 3,
-    "name": "Имя Фамилия",
+    "name": "Андрей Дьяченко",
+    "nickname": "DYAKON",
     "role": "FIRST5",
-    "title": "Road Captain",
-    "achievements": "Участник Дакара 2020",
-    "image": "images/members/member3.jpg",
-    "bike": "KTM 1290"
+    "position": "F5",
+    "location": "Клин",
+    "image": "images/members/member3.jpg"
   },
   {
     "id": 4,
-    "name": "Имя Фамилия",
+    "name": "Иван Кибардин",
+    "nickname": "KOBA4OK",
     "role": "FIRST5",
-    "title": "Сержант",
-    "achievements": "Мастер по карате, 3 дан",
-    "image": "images/members/member4.jpg",
-    "bike": "Yamaha MT-09"
+    "position": "F5",
+    "location": "Москва",
+    "image": "images/members/member4.jpg"
   },
   {
     "id": 5,
-    "name": "Имя Фамилия",
-    "role": "FIRST5",
-    "title": "Казначей",
-    "achievements": "Организатор MOTO RALLY CUP",
-    "image": "images/members/member5.jpg",
-    "bike": "Ducati Multistrada"
+    "name": "Александр Павлов",
+    "nickname": "SANCHES",
+    "role": "MEMBER",
+    "location": "Волжский",
+    "image": "images/members/member5.jpg"
   },
   {
     "id": 6,
-    "name": "Имя Фамилия",
+    "name": "Илья Древаль",
+    "nickname": "DREVAL",
     "role": "MEMBER",
-    "title": "Член клуба",
-    "achievements": "Чемпион региона по эндуро",
-    "image": "images/members/member6.jpg",
-    "bike": "Honda CRF450"
+    "location": "Малаховка",
+    "image": "images/members/member6.jpg"
   },
   {
     "id": 7,
-    "name": "Имя Фамилия",
+    "name": "Влад Сычев",
+    "nickname": "MEHAN (NOMAD)",
     "role": "MEMBER",
-    "title": "Член клуба",
-    "achievements": "Участник ралли-рейдов",
-    "image": "images/members/member7.jpg",
-    "bike": "Suzuki V-Strom"
+    "location": "NOMAD",
+    "image": "images/members/member7.jpg"
   },
   {
     "id": 8,
-    "name": "Имя Фамилия",
+    "name": "Александр Соваренко",
+    "nickname": "SOWIKUS",
     "role": "MEMBER",
-    "title": "Член клуба",
-    "achievements": "Инструктор по вождению",
-    "image": "images/members/member8.jpg",
-    "bike": "Triumph Tiger"
+    "location": "Ольденбург, Германия",
+    "image": "images/members/member8.jpg"
   },
   {
     "id": 9,
-    "name": "Имя Фамилия",
+    "name": "Борис Юров",
+    "nickname": "BORIS",
     "role": "MEMBER",
-    "title": "Член клуба",
-    "achievements": "Мастер спорта по боксу",
-    "image": "images/members/member9.jpg",
-    "bike": "Kawasaki Z900"
+    "location": "Москва",
+    "image": "images/members/member9.jpg"
   },
   {
     "id": 10,
-    "name": "Имя Фамилия",
+    "name": "Антон Игнатов",
+    "nickname": "IRON MAN",
     "role": "MEMBER",
-    "title": "Член клуба",
-    "achievements": "Участник кольцевых гонок",
-    "image": "images/members/member10.jpg",
-    "bike": "Aprilia Tuono"
+    "location": "Тобольск",
+    "image": "images/members/member10.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Кирилл Бирюков",
+    "nickname": "KIRIUS",
+    "role": "MEMBER",
+    "location": "Самара",
+    "image": "images/members/member11.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Андрей Евдокимов",
+    "nickname": "KOSHCHEI",
+    "role": "MEMBER",
+    "location": "Москва",
+    "image": "images/members/member12.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Денис Анисимов",
+    "nickname": "DRAGON",
+    "role": "MEMBER",
+    "location": "Ярославль",
+    "image": "images/members/member13.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Дмитрий Рубан",
+    "nickname": "SOLO",
+    "role": "MEMBER",
+    "location": "Москва",
+    "image": "images/members/member14.jpg"
   }
 ]
