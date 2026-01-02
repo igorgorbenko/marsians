@@ -6,7 +6,7 @@
       "events": "Мероприятия",
       "philosophy": "Философия",
       "geography": "География",
-      "membership": "Членство",
+      "membership": "Иерархия",
       "contact": "Контакты"
     },
     "hero": {
@@ -29,39 +29,35 @@
     },
     "philosophy": {
       "title": "Философия и ценности",
-      "values_title": "Наши ценности",
-      "mission_title": "Миссия",
-      "sport": {
-        "title": "Спорт и дисциплина",
-        "text": "Постоянное развитие навыков и формы."
+      "discipline": {
+        "number": "1",
+        "title": "Дисциплина и развитие",
+        "text1": "Мы растём как райдеры и как личности.",
+        "text2": "Уважение к дороге, технике и своей форме — основа безопасности и силы."
       },
       "brotherhood": {
-        "title": "Товарищество",
-        "text": "Поддержка и доверие на дороге и в жизни."
-      },
-      "respect": {
-        "title": "Ответственность и уважение",
-        "text": "К правилам, к дороге, к сообществу."
-      },
-      "international": {
-        "title": "Международность",
-        "text": "Открытость к людям разных культур и стран."
-      },
-      "yinyang": {
-        "title": "Инь и Янь",
-        "text": "Черный и белый цвета логотипа - две противоположности, борющиеся и существующие только вместе. Основа космогенеза в китайской философии."
+        "number": "2",
+        "title": "Братство и ответственность",
+        "text1": "Мы поддерживаем друг друга на дороге и в жизни.",
+        "text2": "Слово, честь и взаимовыручка — не обсуждаются."
       },
       "traditions": {
-        "title": "Мотоциклетные традиции",
-        "text": "Двигатель BigTwin Harley-Davidson Evolution - символ красоты инженерной мысли, традиций и уважения к истории мотоциклов."
+        "number": "3",
+        "title": "Уважение к традициям мотокультуры",
+        "text1": "Мы бережём историю, символы и правила мотодвижения.",
+        "text2": "Свобода — это не анархия, а ответственность."
       },
-      "protection": {
-        "title": "Взаимопомощь и защита",
-        "text": "Мечи-катаны на логотипе - готовность встать на защиту себя, своей семьи, клуба и братьев. Искусство и сила одновременно."
+      "international": {
+        "number": "4",
+        "title": "Международность и открытость",
+        "text1": "Мы объединяем людей разных стран и культур,",
+        "text2": "сохраняя общие ценности и уважение."
       },
-      "rally": {
-        "title": "Раллийное наследие",
-        "text": "Накапотник на логотипе - дань истории зарождения клуба в ралли, ралли-рейдах и гонках MOTO RALLY CUP (MRC → MaRSians)."
+      "yinyang": {
+        "number": "5",
+        "title": "Баланс противоположностей — Инь и Ян",
+        "text1": "Сила и спокойствие. Скорость и контроль. Свобода и дисциплина.",
+        "text2": "Мы живём в гармонии контрастов — это наш характер и символика."
       }
     },
     "geography": {
@@ -88,10 +84,11 @@
       }
     },
     "membership": {
-      "title": "Членство",
-      "hierarchy": "Иерархия членства",
+      "title": "Иерархия Клуба",
+      "hierarchy": "Иерархия Клуба",
       "info1": "Членами клуба могут стать мужчины-спортсмены любого направления и на мотоциклах любых типов.",
-      "info2": "Женщины могут участвовать в жизни клуба только в статусе SUPPORT."
+      "info2": "В статусах Support и Hangaround кандидат может не иметь мотоцикла.",
+      "info3": "Женщины могут участвовать в жизни клуба только в статусе SUPPORT."
     },
     "members": {
       "title": "Лица клуба",
@@ -141,39 +138,35 @@
     },
     "philosophy": {
       "title": "Philosophy and Values",
-      "values_title": "Our Values",
-      "mission_title": "Mission",
-      "sport": {
-        "title": "Sport and Discipline",
-        "text": "Continuous development of skills and fitness."
+      "discipline": {
+        "number": "1",
+        "title": "Discipline and Development",
+        "text1": "We grow as riders and as individuals.",
+        "text2": "Respect for the road, equipment, and our fitness — the foundation of safety and strength."
       },
       "brotherhood": {
-        "title": "Brotherhood",
-        "text": "Support and trust on the road and in life."
-      },
-      "respect": {
-        "title": "Responsibility and Respect",
-        "text": "To rules, to the road, to the community."
-      },
-      "international": {
-        "title": "International Spirit",
-        "text": "Openness to people of different cultures and countries."
-      },
-      "yinyang": {
-        "title": "Yin and Yang",
-        "text": "Black and white colors of the logo - two opposites, fighting and existing only together. The basis of cosmogenesis in Chinese philosophy."
+        "number": "2",
+        "title": "Brotherhood and Responsibility",
+        "text1": "We support each other on the road and in life.",
+        "text2": "Word, honor, and mutual aid — non-negotiable."
       },
       "traditions": {
-        "title": "Motorcycle Traditions",
-        "text": "BigTwin Harley-Davidson Evolution engine - symbol of engineering beauty, traditions and respect for motorcycle history."
+        "number": "3",
+        "title": "Respect for Motorcycle Culture Traditions",
+        "text1": "We preserve the history, symbols, and rules of the motorcycle movement.",
+        "text2": "Freedom is not anarchy, but responsibility."
       },
-      "protection": {
-        "title": "Mutual Support and Protection",
-        "text": "Katana swords on the logo - readiness to defend oneself, family, club and brothers. Art and power combined."
+      "international": {
+        "number": "4",
+        "title": "International Spirit and Openness",
+        "text1": "We unite people from different countries and cultures,",
+        "text2": "preserving common values and respect."
       },
-      "rally": {
-        "title": "Rally Heritage",
-        "text": "Hood scoop on the logo - tribute to the club's origin in rally, rally-raids and MOTO RALLY CUP races (MRC → MaRSians)."
+      "yinyang": {
+        "number": "5",
+        "title": "Balance of Opposites — Yin and Yang",
+        "text1": "Strength and calm. Speed and control. Freedom and discipline.",
+        "text2": "We live in harmony of contrasts — this is our character and symbolism."
       }
     },
     "geography": {
@@ -202,8 +195,9 @@
     "membership": {
       "title": "Membership",
       "hierarchy": "Membership Hierarchy",
-      "info1": "Male athletes of any discipline and on any type of motorcycle can become club members.",
-      "info2": "Women can participate in club life only in SUPPORT status."
+      "info1": "Club membership is open to male athletes from any discipline, riding motorcycles of any type.",
+      "info2": "A candidate may not own a motorcycle while in Support or Hangaround status.",
+      "info3": "Women can participate in club life only in SUPPORT status."
     },
     "members": {
       "title": "Club Members",

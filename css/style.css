@@ -370,7 +370,7 @@ section {
     text-align: left;
     transition: all 0.3s ease;
     position: relative;
-    min-height: 200px;
+    min-height: 220px;
     display: flex;
     flex-direction: column;
 }
@@ -396,11 +396,25 @@ section {
     box-shadow: var(--shadow-medium);
 }
 
+.philosophy-number {
+    font-family: 'Nasalization', 'Arial', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--text-primary);
+    opacity: 0.15;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    line-height: 1;
+}
+
 .philosophy-card h3 {
     font-size: 16px;
     margin-bottom: 15px;
     color: var(--text-primary);
     letter-spacing: 2px;
+    position: relative;
+    z-index: 1;
 }
 
 .philosophy-card p {
@@ -409,6 +423,11 @@ section {
     line-height: 1.8;
     color: var(--text-secondary);
     letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.philosophy-card p:last-child {
+    margin-bottom: 0;
 }
 
 /* ========================
