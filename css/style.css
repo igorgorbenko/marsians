@@ -371,7 +371,7 @@ section {
     text-align: left;
     transition: all 0.3s ease;
     position: relative;
-    min-height: 220px;
+    min-height: 240px;
     display: flex;
     flex-direction: column;
 }
@@ -418,13 +418,14 @@ section {
 }
 
 .philosophy-card h3 {
-    font-size: 14px;
+    font-size: 13px;
     margin-bottom: 15px;
     color: var(--text-primary);
-    letter-spacing: 1.5px;
+    letter-spacing: 1.2px;
     position: relative;
     z-index: 1;
     line-height: 1.4;
+    padding-right: 60px;
 }
 
 .philosophy-card p {
