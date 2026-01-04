@@ -5,5 +5,13 @@
     src: url('../fonts/Nasalization Rg.otf') format('opentype');
     font-weight: 400;
     font-style: normal;
-    font-display: swap;
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'Nasalization';
+    src: url('../fonts/Nasalization Rg.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: block;
 }
