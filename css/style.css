@@ -838,6 +838,33 @@ section {
     color: var(--text-primary);
 }
 
+.whatsapp-contacts {
+    margin-top: 15px;
+}
+
+.whatsapp-contacts p {
+    font-family: 'Nasalization', 'Arial', sans-serif;
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.whatsapp-contacts a {
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: inline-block;
+    min-width: 140px;
+}
+
+.whatsapp-contacts a:hover {
+    color: var(--accent-hover);
+}
+
 .contact-socials {
     display: flex;
     justify-content: center;
