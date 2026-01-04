@@ -933,14 +933,21 @@ section {
     align-items: center;
     justify-content: center;
     background: transparent;
-    border: none;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
     color: var(--text-secondary);
     transition: all 0.3s ease;
 }
 
 .social-link:hover {
     color: var(--text-primary);
+    border-color: var(--accent-color);
     transform: translateY(-5px);
+}
+
+.social-link svg {
+    width: 28px;
+    height: 28px;
 }
 
 /* ========================
@@ -1281,6 +1288,48 @@ section {
 
     .section-title {
         font-size: 32px;
+    }
+
+    /* Контакты - выравнивание номеров по левому краю */
+    .whatsapp-contacts p {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .whatsapp-contacts a {
+        min-width: auto;
+    }
+
+    /* Социальные сети - показать иконки */
+    .contact-socials {
+        margin-top: 30px;
+        gap: 20px;
+    }
+
+    .social-link {
+        width: 45px;
+        height: 45px;
+    }
+
+    .social-link svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    /* Увеличить MARSIANS и NATION на мобильных */
+    .hero-curved-text text {
+        font-size: 180px !important;
+        letter-spacing: 22px !important;
+    }
+
+    /* Увеличить расстояние между MARSIANS и NATION */
+    .hero-curved-text.hero-top {
+        margin-bottom: 10px !important;
+    }
+
+    .hero-curved-text.hero-bottom {
+        margin-top: 10px !important;
     }
 
     section {
