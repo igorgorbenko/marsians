@@ -919,13 +919,6 @@ section {
     color: var(--accent-hover);
 }
 
-.contact-socials {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 50px;
-}
-
 .social-link {
     width: 50px;
     height: 50px;
@@ -962,9 +955,11 @@ section {
 
 .footer-content {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 40px;
+    position: relative;
 }
 
 .footer-logo {
@@ -979,6 +974,15 @@ section {
 
 .footer-info {
     text-align: right;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .footer-info p {
@@ -1241,11 +1245,16 @@ section {
     .footer-content {
         flex-direction: column;
         gap: 30px;
-        text-align: center;
     }
 
     .footer-info {
         text-align: center;
+    }
+
+    .footer-socials {
+        position: static;
+        transform: none;
+        justify-content: center;
     }
 }
 
@@ -1299,22 +1308,6 @@ section {
 
     .whatsapp-contacts a {
         min-width: auto;
-    }
-
-    /* Социальные сети - показать иконки */
-    .contact-socials {
-        margin-top: 30px;
-        gap: 20px;
-    }
-
-    .social-link {
-        width: 45px;
-        height: 45px;
-    }
-
-    .social-link svg {
-        width: 24px;
-        height: 24px;
     }
 
     /* Увеличить MARSIANS и NATION на мобильных */
