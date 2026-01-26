@@ -104,6 +104,7 @@ function initMap() {
         // Международные
         { lat: 53.1435, lng: 8.2146, title: "Олденбург, Германия", type: "international" },
         { lat: 32.6669, lng: -16.9241, title: "Мадейра, Португалия", type: "international" },
+        { lat: 54.5808, lng: 16.8619, title: "Устка, Польша", type: "international" },
         { lat: 40.1792, lng: 44.4991, title: "Ереван, Армения", type: "international" },
         { lat: 25.2048, lng: 55.2708, title: "Дубай, ОАЭ", type: "international" },
         { lat: 32.6739, lng: 35.2985, title: "Мигдаль Ха Эмек, Израиль", type: "international" },
