@@ -20,8 +20,7 @@ async function loadMemorial() {
             <div class="memorial-card">
                 <div class="memorial-image" style="background-image: url('${person.image}')"></div>
                 <div class="memorial-info">
-                    <h3 class="memorial-name">${person.name}</h3>
-                    <div class="memorial-nickname">${person.nickname}</div>
+                    <h3 class="memorial-nickname">${person.nickname}</h3>
                     ${person.status ? `<div class="memorial-status">${person.status}</div>` : ''}
                     <div class="memorial-dates">† ${person.dates}</div>
                     ${person.description ? `<p class="memorial-text">${person.description}</p>` : ''}
