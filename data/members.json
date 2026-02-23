@@ -6,7 +6,8 @@
     "role": "FIRST5",
     "position": "F5",
     "location": "NOMAD",
-    "image": "images/members/member1.jpg"
+    "image": "images/members/member1.jpg",
+    "imagePosition": "center top"
   },
   {
     "id": 2,
@@ -15,7 +16,8 @@
     "role": "FIRST5",
     "position": "F5",
     "location": "Москва",
-    "image": "images/members/member2.jpg"
+    "image": "images/members/f5/gregor.png",
+    "imagePosition": "center 20%"
   },
   {
     "id": 3,
@@ -24,7 +26,8 @@
     "role": "FIRST5",
     "position": "F5",
     "location": "Клин",
-    "image": "images/members/member3.jpg"
+    "image": "images/members/f5/dyakon.png",
+    "imagePosition": "center 15%"
   },
   {
     "id": 4,
@@ -33,7 +36,9 @@
     "role": "FIRST5",
     "position": "F5",
     "location": "Москва",
-    "image": "images/members/member4.jpg"
+    "image": "images/members/f5/koba4ok.png",
+    "imagePosition": "center 10%",
+    "imageSize": "105%"
   },
   {
     "id": 5,
@@ -41,7 +46,8 @@
     "nickname": "SANCHES",
     "role": "MEMBER",
     "location": "Волжский",
-    "image": "images/members/member5.jpg"
+    "image": "images/members/mem/sanches.png",
+    "imagePosition": "center 20%"
   },
   {
     "id": 6,
@@ -49,7 +55,8 @@
     "nickname": "DREVAL",
     "role": "MEMBER",
     "location": "Малаховка",
-    "image": "images/members/member6.jpg"
+    "image": "images/members/mem/dreval.png",
+    "imagePosition": "center 25%"
   },
   {
     "id": 7,
@@ -57,7 +64,8 @@
     "nickname": "MEHAN",
     "role": "MEMBER",
     "location": "NOMAD",
-    "image": "images/members/member7.jpg"
+    "image": "images/members/mem/mehan.png",
+    "imagePosition": "center 5%"
   },
   {
     "id": 8,
@@ -65,15 +73,8 @@
     "nickname": "SOWIKUS",
     "role": "MEMBER",
     "location": "Ольденбург, Германия",
-    "image": "images/members/member8.jpg"
-  },
-  {
-    "id": 9,
-    "name": "Борис Юров",
-    "nickname": "BORIS",
-    "role": "MEMBER",
-    "location": "Москва",
-    "image": "images/members/member9.jpg"
+    "image": "images/members/mem/sowikus.png",
+    "imagePosition": "center 15%"
   },
   {
     "id": 10,
@@ -81,7 +82,8 @@
     "nickname": "IRON MAN",
     "role": "MEMBER",
     "location": "Тобольск",
-    "image": "images/members/member10.jpg"
+    "image": "images/members/mem/ironman.png",
+    "imagePosition": "center 20%"
   },
   {
     "id": 11,
@@ -89,7 +91,8 @@
     "nickname": "KIRIUS",
     "role": "MEMBER",
     "location": "Самара",
-    "image": "images/members/member11.jpg"
+    "image": "images/members/mem/kirius.png",
+    "imagePosition": "center 25%"
   },
   {
     "id": 12,
@@ -97,7 +100,8 @@
     "nickname": "KOSHCHEI",
     "role": "MEMBER",
     "location": "Москва",
-    "image": "images/members/member12.jpg"
+    "image": "images/members/mem/koshchei.png",
+    "imagePosition": "center 20%"
   },
   {
     "id": 13,
@@ -105,7 +109,8 @@
     "nickname": "DRAGON",
     "role": "MEMBER",
     "location": "Ярославль",
-    "image": "images/members/member13.jpg"
+    "image": "images/members/mem/dragon.png",
+    "imagePosition": "center 20%"
   },
   {
     "id": 14,
@@ -113,6 +118,16 @@
     "nickname": "SOLO",
     "role": "MEMBER",
     "location": "Москва",
-    "image": "images/members/member14.jpg"
+    "image": "images/members/mem/solo.png",
+    "imagePosition": "center 15%"
+  },
+  {
+    "id": 9,
+    "name": "Борис Юров",
+    "nickname": "BORIS",
+    "role": "MEMBER",
+    "location": "Москва",
+    "image": "images/members/member9.jpg",
+    "imagePosition": "center top"
   }
 ]

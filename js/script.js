@@ -219,7 +219,7 @@ async function loadMembers() {
         if (first5Container) {
             first5Container.innerHTML = first5.map(member => `
                 <div class="member-card first5-card">
-                    <div class="member-image" style="background-image: url('${member.image}')"></div>
+                    <div class="member-image" style="background-image: url('${member.image}'); background-position: ${member.imagePosition || 'center top'}; ${member.imageSize ? 'background-size: ' + member.imageSize + ';' : ''}"></div>
                     <div class="member-info">
                         <div class="member-badge">F5</div>
                         <h3 class="member-nickname">${member.nickname}</h3>
@@ -237,7 +237,7 @@ async function loadMembers() {
         if (membersContainer) {
             membersContainer.innerHTML = regularMembers.map(member => `
                 <div class="member-card">
-                    <div class="member-image" style="background-image: url('${member.image}')"></div>
+                    <div class="member-image" style="background-image: url('${member.image}'); background-position: ${member.imagePosition || 'center top'}; ${member.imageSize ? 'background-size: ' + member.imageSize + ';' : ''}"></div>
                     <div class="member-info">
                         <h3 class="member-nickname">${member.nickname}</h3>
                         <div class="member-name">${member.name}</div>

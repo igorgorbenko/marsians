@@ -1499,9 +1499,10 @@ section {
     width: 100%;
     height: 200px;
     background-size: cover;
-    background-position: center;
+    background-position: center top;
     background-color: var(--secondary-bg);
     position: relative;
+    filter: grayscale(100%);
 }
 
 .member-image::after {
