@@ -1226,6 +1226,11 @@ section {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .events-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
     .nav-menu {
         position: fixed;
         top: 70px;
@@ -1354,6 +1359,11 @@ section {
 
     .objectives-grid {
         grid-template-columns: 1fr;
+    }
+
+    .events-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 
     .path-step {
@@ -1560,6 +1570,13 @@ section {
     background: var(--secondary-bg);
 }
 
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
 .events-carousel-wrapper {
     position: relative;
     margin-top: 50px;
@@ -1592,6 +1609,11 @@ section {
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
+}
+
+.event-card.event-mandatory {
+    border: 2px solid var(--accent-color);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
 }
 
 .event-card:hover {
@@ -1666,6 +1688,14 @@ section {
     margin-bottom: 15px;
     color: var(--accent-color);
     line-height: 1.4;
+}
+
+.event-location {
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: var(--accent-color);
+    margin-bottom: 10px;
+    font-family: 'Nasalization', Arial, sans-serif;
 }
 
 .event-description {

@@ -186,21 +186,38 @@ async function loadEvents() {
 
         if (!eventsContainer) return;
 
-        // Sort events by date (newest first)
-        events.sort((a, b) => new Date(b.date) - new Date(a.date));
+        // Sort events by date (upcoming first)
+        events.sort((a, b) => new Date(a.date) - new Date(b.date));
 
-        eventsContainer.innerHTML = events.map(event => `
-            <article class="event-card">
+        // Get current language
+        const currentLang = window.i18n ? window.i18n.currentLang : 'ru';
+
+        eventsContainer.innerHTML = events.map(event => {
+            let dateStr = formatDate(event.date);
+            if (event.dateEnd) {
+                dateStr += ' - ' + formatDate(event.dateEnd);
+            }
+
+            // Get localized values
+            const title = typeof event.title === 'object' ? event.title[currentLang] : event.title;
+            const location = typeof event.location === 'object' ? event.location[currentLang] : event.location;
+            const description = typeof event.description === 'object' ? event.description[currentLang] : event.description;
+            const category = typeof event.category === 'object' ? event.category[currentLang] : event.category;
+
+            return `
+            <article class="event-card ${event.mandatory ? 'event-mandatory' : ''}">
                 <div class="event-image" style="background-image: url('${event.image}')">
-                    <div class="event-category">${event.category}</div>
+                    <div class="event-category">${category}</div>
                 </div>
                 <div class="event-content">
-                    <div class="event-date">${formatDate(event.date)}</div>
-                    <h3 class="event-title">${event.title}</h3>
-                    <p class="event-description">${event.description}</p>
+                    <div class="event-date">${dateStr}</div>
+                    <h3 class="event-title">${title}</h3>
+                    ${location ? `<div class="event-location">📍 ${location}</div>` : ''}
+                    <p class="event-description">${description}</p>
                 </div>
             </article>
-        `).join('');
+        `;
+        }).join('');
     } catch (error) {
         console.error('Error loading events:', error);
     }

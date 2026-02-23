@@ -47,7 +47,7 @@
     <link rel="manifest" href="site.webmanifest">
 
     <link rel="stylesheet" href="css/nasalization.css">
-    <link rel="stylesheet" href="css/style.css?v=1771849461">
+    <link rel="stylesheet" href="css/style.css?v=1771851464">
 </head>
 <body>
     <!-- Header -->
@@ -92,14 +92,8 @@
                 <div class="title-line"></div>
             </div>
             <div class="events-content">
-                <div class="events-carousel-wrapper">
-                    <button class="carousel-btn prev-btn" aria-label="Previous">‹</button>
-                    <div class="events-carousel">
-                        <div id="events-container" class="events-track">
-                            <!-- Events will be loaded dynamically -->
-                        </div>
-                    </div>
-                    <button class="carousel-btn next-btn" aria-label="Next">›</button>
+                <div id="events-container" class="events-grid">
+                    <!-- Events will be loaded dynamically -->
                 </div>
             </div>
         </div>
@@ -146,11 +140,7 @@
         // Initialize i18n when page loads
         document.addEventListener('DOMContentLoaded', () => {
             window.i18n.init();
-
-            // Load events on this page
-            loadEvents().then(() => {
-                setTimeout(initCarousel, 100);
-            });
+            loadEvents();
         });
     </script>
 </body>

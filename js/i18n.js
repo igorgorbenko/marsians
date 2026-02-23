@@ -64,6 +64,11 @@ function switchLanguage(lang) {
     });
 
     updateContent();
+
+    // Reload events if loadEvents function exists
+    if (typeof loadEvents === 'function') {
+        loadEvents();
+    }
 }
 
 // Initialize i18n
@@ -92,5 +97,6 @@ window.i18n = {
     init: initI18n,
     switch: switchLanguage,
     get: getTranslation,
-    getCurrentLang: () => currentLang
+    getCurrentLang: () => currentLang,
+    get currentLang() { return currentLang; }
 };
