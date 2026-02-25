@@ -1703,6 +1703,26 @@ section {
     line-height: 1.8;
     color: #cccccc;
     font-family: 'Roboto', Arial, sans-serif;
+    margin-bottom: 15px;
+}
+
+.event-link {
+    display: inline-block;
+    margin-top: auto;
+    padding: 10px 20px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--accent-color);
+    text-decoration: none;
+    border: 1px solid var(--accent-color);
+    transition: all 0.3s ease;
+    font-family: 'Nasalization', Arial, sans-serif;
+    text-align: center;
+}
+
+.event-link:hover {
+    background: var(--accent-color);
+    color: #000000;
 }
 
 /* =====================================================

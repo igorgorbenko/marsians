@@ -203,6 +203,7 @@ async function loadEvents() {
             const location = typeof event.location === 'object' ? event.location[currentLang] : event.location;
             const description = typeof event.description === 'object' ? event.description[currentLang] : event.description;
             const category = typeof event.category === 'object' ? event.category[currentLang] : event.category;
+            const moreText = currentLang === 'ru' ? 'Подробнее →' : 'More info →';
 
             return `
             <article class="event-card ${event.mandatory ? 'event-mandatory' : ''}">
@@ -214,6 +215,7 @@ async function loadEvents() {
                     <h3 class="event-title">${title}</h3>
                     ${location ? `<div class="event-location">📍 ${location}</div>` : ''}
                     <p class="event-description">${description}</p>
+                    ${event.url ? `<a href="${event.url}" class="event-link" target="_blank" rel="noopener noreferrer">${moreText}</a>` : ''}
                 </div>
             </article>
         `;

@@ -96,7 +96,8 @@
       "subtitle": "Члены клуба"
     },
     "events": {
-      "title": "Мероприятия"
+      "title": "Мероприятия",
+      "more": "Подробнее"
     },
     "contact": {
       "title": "Контакты",
@@ -211,7 +212,8 @@
       "subtitle": "Members"
     },
     "events": {
-      "title": "Events"
+      "title": "Events",
+      "more": "More info"
     },
     "contact": {
       "title": "Contact",
