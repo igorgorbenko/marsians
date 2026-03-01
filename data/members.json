@@ -83,7 +83,8 @@
     "role": "MEMBER",
     "location": "Тобольск",
     "image": "images/members/mem/ironman.png",
-    "imagePosition": "center 20%"
+    "imagePosition": "center 20%",
+    "imageSize": "160%"
   },
   {
     "id": 11,
@@ -127,7 +128,7 @@
     "nickname": "BORIS",
     "role": "MEMBER",
     "location": "Москва",
-    "image": "images/members/member9.jpg",
+    "image": "images/members/mem/boris.jpg",
     "imagePosition": "center top"
   }
 ]
