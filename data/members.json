@@ -71,9 +71,10 @@
     "id": 8,
     "name": "Александр Соваренко",
     "nickname": "SOWIKUS",
-    "role": "MEMBER",
+    "role": "FIRST5",
+    "position": "F5",
     "location": "Ольденбург, Германия",
-    "image": "images/members/mem/sowikus.png",
+    "image": "images/members/f5/sowikus.png",
     "imagePosition": "center 15%"
   },
   {
