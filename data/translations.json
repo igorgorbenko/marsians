@@ -230,5 +230,121 @@
       "subtitle": "In Memory of Fallen Brothers",
       "description": "We remember those who shared the road, values, and brotherhood with us. Their journey has ended, but the memory of them lives on in our hearts."
     }
-  }
+  },
+  "de": {
+    "nav": {
+      "about": "Über uns",
+      "philosophy": "Philosophie",
+      "members": "Die Gesichter des Clubs",
+      "events": "Veranstaltungen",
+      "memorial": "Memorial",
+      "geography": "Geographie",
+      "membership": "Hierarchie",
+      "contact": "Kontakte"
+    },
+    "hero": {
+      "subtitle": "Internationaler Motorradclub",
+      "date": "EST. 19.07.2019 | MCC STATUS 08.12.2022"
+    },
+    "about": {
+      "title": "Über uns",
+      "intro": "MARSIANS MCC — Internationaler Motorradclub, der Sportler aus verschiedenen Disziplinen wie Rallye-Raids, Enduro, Motocross, Trophy, Rundstreckenrennen und Motorradtourismus vereint.",
+      "history": "Der Club wurde 2019 auf der Grundlage der Sportbewegung Moto Rally Cup gegründet und erhielt im Dezember 2022 den offiziellen Status eines MCC.",
+      "founder": "Founder (Gründer) — Alexey Kuzmich (KUZMICH) – Profi-Rennfahrer, Meister des Sports internationaler Klasse, neunmaliger Teilnehmer des Rallye-Marathons „DAKAR“.",
+      "members": "Aktive Sportler und Veteranen aus den Bereichen Rallye, Rallye-Raids, Kampfsport und anderen Sportdisziplinen; Motorradreisende und Technikbegeisterte; ein Team, in dem Erfahrung, gegenseitige Unterstützung und fairer Sport geschätzt werden.",
+      "mission": "MARSIANS MCC wurde für diejenigen gegründet, die ein Motorrad nicht nur als Fortbewegungsmittel betrachten, sondern als Symbol für Freiheit, Kraft und Weiterentwicklung. Wir bauen den Club der Zukunft auf: eine sportliche, offene und internationale Gemeinschaft, die starke und zielstrebige Fahrer vereint.",
+      "stats": {
+        "founded": "Gründungsjahr",
+        "mcc": "Status MCC",
+        "countries": "Länder"
+      }
+    },
+    "philosophy": {
+      "title": "Philosophie und Werte",
+      "discipline": {
+        "number": "1",
+        "title": "Disziplin und Entwicklung",
+        "text1": "Wir wachsen als Fahrer und als Persönlichkeiten.",
+        "text2": "Respekt vor der Straße, der Technik und der eigenen Kondition – das ist die Grundlage für Sicherheit und Stärke."
+      },
+      "brotherhood": {
+        "number": "2",
+        "title": "Brüderlichkeit und Verantwortung",
+        "text1": "Wir unterstützen uns gegenseitig auf der Straße und im Leben.",
+        "text2": "Das Wort, die Ehre und die gegenseitige Hilfe stehen außer Frage."
+      },
+      "traditions": {
+        "number": "3",
+        "title": "Respekt vor den Traditionen der Motorradkultur",
+        "text1": "Wir bewahren die Geschichte, Symbole und Regeln der Motorradbewegung.",
+        "text2": "Freiheit ist keine Anarchie, sondern Verantwortung."
+      },
+      "international": {
+        "number": "4",
+        "title": "Internationalität und Offenheit",
+        "text1": "Wir bringen Menschen aus verschiedenen Ländern und Kulturen zusammen,",
+        "text2": "und bewahren dabei gemeinsame Werte und Respekt."
+      },
+      "yinyang": {
+        "number": "5",
+        "title": "Das Gleichgewicht der Gegensätze – Yin und Yang",
+        "text1": "Kraft und Ruhe. Geschwindigkeit und Kontrolle. Freiheit und Disziplin.",
+        "text2": "Wir leben in Harmonie der Kontraste – das ist unser Charakter und unser Sinnbild."
+      }
+    },
+    "geography": {
+      "title": "Geografie des Clubs",
+      "intro": "Heute vereint MARSIANS MCC Fahrer aus verschiedenen Ländern und Regionen:",
+      "outro": "Diese Reichweite macht MARSIANS zu einem einzigartigen internationalen MCC mit Vertretern in Europa, dem Nahen Osten, Lateinamerika und Nordafrika.",
+      "countries": {
+        "russia": "🇷🇺 Russland",
+        "germany": "🇩🇪 Deutschland",
+        "portugal": "🇵🇹 Portugal",
+        "poland": "🇵🇱 Polen",
+        "israel": "🇮🇱 Izrael",
+        "saudi": "🇸🇦 Saudi-Arabien",
+        "uae": "🇦🇪 Vereinigte Arabische Emirate",
+        "ecuador": "🇪🇨 Ecuador",
+        "algeria": "🇩🇿 Algerien",
+        "armenia": "🇦🇲 Armenien",
+        "bosnia": "🇧🇦 Bosnien und Herzegowina"
+      },
+      "stats": {
+        "cities": "Städte",
+        "countries": "Länder",
+        "russia": "Städte Russlands",
+        "moscow": "Städte in der Umgebung von Moskau"
+      }
+    },
+    "membership": {
+      "title": "Hierarchie",
+      "hierarchy": "Club-Hierarchie",
+      "info1": "ЧMitglieder des Clubs können männliche Sportler aller Disziplinen und mit Motorrädern aller Typen werden.",
+      "info2": "In den Status „Support“ und „Hangaround“ muss der Kandidat kein Motorrad besitzen.",
+      "info3": "Frauen können nur als SUPPORT am Clubleben mitwirken."
+    },
+    "members": {
+      "title": "Die Gesichter des Clubs",
+      "subtitle": "Clubmitglieder"
+    },
+    "events": {
+      "title": "Veranstaltungen",
+      "more": "Mehr"
+    },
+    "contact": {
+      "title": "Kontakte",
+      "email": "Email",
+      "whatsapp": "WhatsApp",
+      "first5": "Kontakte der FIRST5"
+    },
+    "footer": {
+      "subtitle": "Motorradclub für Sportler",
+      "copyright": "Alle Rechte vorbehalten."
+    },
+    "memorial": {
+      "title": "Memorial",
+      "subtitle": "In Erinnerung an die gefallenen Brüder",
+      "description": "Wir erinnern uns an diejenigen, die unseren Weg, unsere Werte und unsere Brüderlichkeit geteilt haben. Ihr Weg ist zu Ende, aber die Erinnerung an sie lebt in unseren Herzen weiter."
+    }
+  }  
 }
